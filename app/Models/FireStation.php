@@ -7,8 +7,20 @@ use Illuminate\Database\Eloquent\Model;
 class FireStation extends Model
 {
     //
-   public function state()
-   {
-    return $this->belongsTo(State::class);
+    public $timestamps = false;
+
+    protected $table = 'fire_stations';
+
+    protected $filliable = [
+        'name',
+        'adress',
+        'city',
+        'phone',
+        'state_id',
+    ];
+    
+    public function state()
+    {
+        return $this->belongsTo(State::class);
     }
 }
