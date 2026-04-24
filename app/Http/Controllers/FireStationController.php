@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\FireStation;
 use Illuminate\Http\Request;
 
 class FireStationController extends Controller
@@ -9,13 +10,13 @@ class FireStationController extends Controller
     //
     public function index()
     {
-        $fireStations = FireStation::width('state')->get();
+        $fireStations = FireStation::with('state')->get();
 
         if (request()->routeIs('home'))
         {
             return view('app', compact('fireStations'));
         }
 
-        return view('fireStation', compact('fireStation'));
+        return view('fireStation', compact('fireStations'));
     }
 }
