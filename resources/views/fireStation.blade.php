@@ -2,8 +2,9 @@
 
 @section('content')
 
-<h1 class="mb-4">Liste des casernes de pompier</h1>
 
+<h1 class="mb-4">Liste des casernes de pompier</h1>
+</br>
 <table class="table table-bordered table-striped">
     <thread class="table-dark">
         <tr>
@@ -29,5 +30,12 @@
         @endforeach
     </tbody>
 </table>
+</br>
+<hr class="my-4">
+
+<h2 class="mb-4 text-center">Ajouter une nouvelle caserne</h2>
+
+<form action="{{ route('firestations.store') }}" method="POST" class="border p-4 rounded bg-light">
 
 @endsection
+

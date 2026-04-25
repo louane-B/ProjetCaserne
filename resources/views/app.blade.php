@@ -2,7 +2,11 @@
 
 @section('content')
 
-<h1 class="mb-4">Liste des casernes de pompier</h1>
+<h1 class="mb-4 text-center">Bienvenue sur la page d'accueil</h1>
+</br>
+</br>
+</br>
+<h2 class="mb-4">Liste des casernes de pompier</h2>
 
 <table class="table table-bordered table-striped">
     <thread class="table-dark">
