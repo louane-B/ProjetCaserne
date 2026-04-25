@@ -1,4 +1,4 @@
-@extends('app')
+@extends('layout')
 
 @section('content')
 
@@ -12,6 +12,7 @@
             <th>City</th>
             <th>Phone</th>
             <th>State</th>
+            <th style="width: 200px;">Actions</th>
         </tr>
     </thread>
 
