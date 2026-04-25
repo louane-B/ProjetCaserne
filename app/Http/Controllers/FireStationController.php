@@ -38,4 +38,12 @@ class FireStationController extends Controller
 
         return redirect('/FireStations')->with('success', 'Caserne ajoutée avec succès');
     }
+
+    public function formModifyFireStation($id)
+    {
+        $station = FireStation::findOrFail($id);
+        $states = \App\Models\State::all();
+
+        return view('fireStationModify', compact('station', 'states'));
+    }
 }

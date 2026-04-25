@@ -7,3 +7,6 @@ Route::get('/', [FireStationController::class, 'index'])->name('home');
 Route::get('/FireStations', [FireStationController::class, 'index'])->name('firestations.index');
 
 Route::post('/FireStation/add', [FireStationController::class, 'add'])->name('firestations.add');
+
+Route::get('/FireStations/{id}/edit', [FireStationController::class, 'formModifyFireStation'])->name('firestations.edit');
+Route::put('/FireStations/{id}/update', [FireStationController::class, 'update'])->name('firestations.update');
