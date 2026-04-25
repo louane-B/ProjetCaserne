@@ -4,7 +4,7 @@
 
 <h1 class="text-center mb-4">Modifier la caserne</h1>
 </br>
-<form action="{{ route('fireStations.update', $station->id) }}" method="POST" class="border p-4 bg-light rounded">
+<form action="{{ route('firestations.update', $station->id) }}" method="POST" class="border p-4 bg-light rounded">
     @csrf
     @method('PUT')
 
