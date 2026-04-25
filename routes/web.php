@@ -5,3 +5,5 @@ use App\Http\Controllers\FireStationController;
 
 Route::get('/', [FireStationController::class, 'index'])->name('home');
 Route::get('/FireStations', [FireStationController::class, 'index'])->name('firestations.index');
+
+Route::post('/FireStation/add', [FireStationController::class, 'add'])->name('firestations.add');
