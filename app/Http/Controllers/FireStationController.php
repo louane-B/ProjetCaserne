@@ -46,4 +46,27 @@ class FireStationController extends Controller
 
         return view('fireStationModify', compact('station', 'states'));
     }
+
+    public function update($id, Request $request)
+    {
+        $request->validate([
+            'name' => 'required',
+            'adress' => 'required',
+            'city' => 'required',
+            'phone' => 'required',
+            'state_id' => 'required|exists:states,id',
+        ]);
+
+        $station = FireStation::findOrFail($id);
+
+        $station->update([
+            'name' => $request->name,
+            'adress' => $request->adress,
+            'city' => $request->city,
+            'phone' => $request->phone,
+            'state_id' => $request->state_id,
+        ]);
+
+        return redirect('/FireStations')->with('success', 'Caserne modifiée avec succès');
+    }
 }
