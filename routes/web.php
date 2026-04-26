@@ -12,3 +12,5 @@ Route::get('/FireStations/{id}/edit', [FireStationController::class, 'formModify
 Route::put('/FireStations/{id}/update', [FireStationController::class, 'update'])->name('firestations.update');
 
 Route::delete('/FireStations/{id}/delete', [FireStationController::class, 'delete'])->name('firestations.delete');
+
+Route::delete('/FireStations/clear', [FireStationController::class, 'clear'])->name('firestations.clear');
