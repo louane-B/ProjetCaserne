@@ -1,0 +1,20 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Model;
+
+class State extends Model
+{
+    //
+    public $timestamps = false;
+
+    protected $table = 'states';
+
+    protected $filliable = ['description'];
+
+    public function fireStations()
+    {
+        return $this->hasMany(FireStation::class);
+    }
+}
