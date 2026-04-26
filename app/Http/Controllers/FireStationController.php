@@ -69,4 +69,12 @@ class FireStationController extends Controller
 
         return redirect('/FireStations')->with('success', 'Caserne modifiée avec succès');
     }
+
+    public function delete($id)
+    {
+        $station = FireStation::findOrFail($id);
+        $station->delete();
+
+        return redirect('/FireStations')->with('success', 'Caserne supprimée avec succès');
+    }
 }

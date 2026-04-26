@@ -2,6 +2,11 @@
 
 @section('content')
 
+@if(session('success'))
+    <div class="alert alert-success">
+        {{ session('success') }}
+    </div>
+@endif
 
 <h1 class="mb-4">Liste des casernes de pompier</h1>
 </br>
@@ -29,6 +34,17 @@
                     <a href="{{ route('firestations.edit', $station->id) }}" class="btn btn-warning btn_sm">
                         Modifier
                     </a>
+
+                    <form action="{{ route('firestations.delete', $station->id) }}"
+                        method="POST"
+                        style="display:inline-block;"
+                        onsubmit="return confirm('Voulez-vous vraiment supprimer cette caserne ?');">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" class="btn btn-danger btn-sm">
+                            supprimer
+                        </button>
+                    </form>
                 </td>
             </tr>
         @endforeach
