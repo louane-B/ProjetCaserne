@@ -10,6 +10,18 @@
 
 <h1 class="mb-4">Liste des casernes de pompier</h1>
 </br>
+<form action="{{ route('firestations.clear') }}"
+        method="POST"
+        onsubmit="return confirm('Voulez-vous vraiment supprimer TOUTES les casernes ?');"
+        class="mb-3">
+    @csrf
+    @method('DELETE')
+
+    <button type="submit" class="btn btn-danger">
+        Vider la liste
+    </button>
+</form>
+</br>
 <table class="table table-bordered table-striped">
     <thread class="table-dark">
         <tr>
