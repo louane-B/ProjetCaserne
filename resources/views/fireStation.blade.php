@@ -25,7 +25,11 @@
                 <td>{{ $station->city }}</td>
                 <td>{{ $station->phone }}</td>
                 <td>{{ $station->state->description }}</td>
-
+                <td>
+                    <a href="{{ route('firestations.edit', $station->id) }}" class="btn btn-warning btn_sm">
+                        Modifier
+                    </a>
+                </td>
             </tr>
         @endforeach
     </tbody>
