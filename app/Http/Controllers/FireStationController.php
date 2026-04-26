@@ -77,4 +77,11 @@ class FireStationController extends Controller
 
         return redirect('/FireStations')->with('success', 'Caserne supprimée avec succès');
     }
+
+    public function clear()
+    {
+        FireStation::truncate();
+
+        return redirect('/FireStations')->with('success', 'Toutes les casernes ont été supprimées');
+    }
 }
