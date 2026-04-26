@@ -1,25 +1,36 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projet Caserne</title>
+@extends('layout')
 
-    {{-- Bootstrap (optionnel mais recommandé) --}}
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-</head>
-<body>
+@section('content')
 
-    {{-- Navbar --}}
-    @include('navbar')
+<h1 class="mb-4 text-center">Bienvenue sur la page d'accueil</h1>
+</br>
+</br>
+</br>
+<h2 class="mb-4">Liste des casernes de pompier</h2>
 
-    <div class="container mt-4">
-        {{-- Contenu spécifique à chaque page --}}
-        @yield('content')
-    </div>
+<table class="table table-bordered table-striped">
+    <thread class="table-dark">
+        <tr>
+            <th>Name</th>
+            <th>Adress</th>
+            <th>City</th>
+            <th>Phone</th>
+            <th>State</th>
+        </tr>
+    </thread>
 
-    {{-- Scripts Bootstrap --}}
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <tbody>
+        @foreach($fireStations as $station)
+            <tr>
+                <td>{{ $station->name }}</td>
+                <td>{{ $station->adress }}</td>
+                <td>{{ $station->city }}</td>
+                <td>{{ $station->phone }}</td>
+                <td>{{ $station->state->description }}</td>
 
-</body>
-</html>
+            </tr>
+        @endforeach
+    </tbody>
+</table>
+
+@endsection

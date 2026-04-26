@@ -11,7 +11,7 @@ class State extends Model
 
     protected $table = 'states';
 
-    protected $filliable = ['description'];
+    protected $fillable = ['description'];
 
     public function fireStations()
     {

@@ -12,7 +12,7 @@ class FireStation extends Model
 
     protected $table = 'fire_stations';
 
-    protected $filliable = [
+    protected $fillable = [
         'name',
         'adress',
         'city',
