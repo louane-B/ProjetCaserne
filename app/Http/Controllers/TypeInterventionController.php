@@ -16,7 +16,7 @@ class TypeInterventionController extends Controller
     public function index()
     {
         // Load all Type intervention
-        $typeIntervention = TypeIntervention::get();
+        $typeIntervention = TypeIntervention::all();
         
         // Otherwise, show the Type intervention list page
         return view('typeIntervention', compact('typeIntervention'));
