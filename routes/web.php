@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FireStationController;
+use App\Http\Controllers\TypeInterventionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,3 +30,14 @@ Route::delete('/FireStations/{id}/delete', [FireStationController::class, 'delet
 
 /* Delete ALL fire stations (clear the table) */
 Route::delete('/FireStations/clear', [FireStationController::class, 'clear'])->name('firestations.clear');
+
+/*
+|--------------------------------------------------------------------------
+| Web Routes
+|--------------------------------------------------------------------------
+| These routes handle all Type Intervention CRUD operations.
+| Each route points to a specific controller method.
+*/
+
+/* Display list of type interventions */
+Route::get('/TypeInterventions', [TypeInterventionController::class, 'index'])->name('typeIntervention.index');
