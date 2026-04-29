@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('type_interventions', function (Blueprint $table) {
             $table->id();
+            $table->integer('NoIntervention');
+            $table->string('description');
             $table->timestamps();
         });
     }
