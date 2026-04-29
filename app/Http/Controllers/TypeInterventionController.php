@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\TypeIntervention;
 use Illuminate\Http\Request;
 
 class TypeInterventionController extends Controller
@@ -19,6 +20,6 @@ class TypeInterventionController extends Controller
         $typeIntervention = TypeIntervention::all();
         
         // Otherwise, show the Type intervention list page
-        return view('typeInterventions', compact('typeInterventions'));
+        return view('typeIntervention', compact('typeIntervention'));
     }
 }
