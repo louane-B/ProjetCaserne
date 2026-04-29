@@ -16,7 +16,7 @@
 
     {{-- Table body with dynamic data --}}
     <tbody>
-        @foreach($typeIntervention as $intervention)
+        @foreach($typeInterventions as $intervention)
             <tr>
                 {{-- Type Intervention number --}}
                 <td>{{ $intervention->NoIntervention }}</td>

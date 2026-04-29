@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+
 use Illuminate\Database\Eloquent\Model;
 
 class TypeIntervention extends Model
@@ -19,7 +20,7 @@ class TypeIntervention extends Model
     public $timestamps = false;
 
     // Explicit table name (optional but clear)
-    protected $table = 'fire_stations';
+    protected $table = 'type_interventions';
 
     // Fields that can be mass-assigned
     protected $fillable = [
