@@ -18,6 +18,7 @@
         <tr>
             <th>Intervention Number</th>
             <th>Description</th>
+            <th style="width: 200px;">Actions</th>
         </tr>
     </thread>
 
@@ -29,6 +30,11 @@
                 <td>{{ $intervention->NoIntervention }}</td>
                 {{-- Type Intervention description --}}
                 <td>{{ $intervention->description }}</td>
+                <td>
+                    {{-- Edit button --}}
+                    <a href="{{ route('typeIntervention.edit', $intervention->id) }}" class="btn btn-warning btn_sm">
+                        Modifier
+                    </a>
             </tr>
         @endforeach
     </tbody>
