@@ -33,7 +33,7 @@
 <h2 class="mb-4 text-center">Add a New Type Intervention</h2>
 
 {{-- Form to add a new Type Intervention --}}
-<form action="{{ route('intervention.add') }}" method="POST" class="border p-4 rounded bg-light">
+<form action="{{ route('Typeintervention.add') }}" method="POST" class="border p-4 rounded bg-light">
     @csrf 
 
     {{-- Type Intervention number --}}

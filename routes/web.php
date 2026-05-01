@@ -41,3 +41,6 @@ Route::delete('/FireStations/clear', [FireStationController::class, 'clear'])->n
 
 /* Display list of type interventions */
 Route::get('/TypeInterventions', [TypeInterventionController::class, 'index'])->name('typeIntervention.index');
+
+/* Add a new TypeIntervention */
+Route::get('/TypeIntervention/add', [TypeInterventionController::class, 'add'])->name('typeIntervention.add');
