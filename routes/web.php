@@ -48,5 +48,8 @@ Route::post('/TypeIntervention/add', [TypeInterventionController::class, 'add'])
 /* Display the edit form for a specific Type Intervention */
 Route::get('/TypeIntervention/{id}/edit', [TypeInterventionController::class, 'formModifyTypeIntervention'])->name('typeIntervention.edit');
 
-/* Update a specific fire station */
+/* Update a specific Type Intervention */
 Route::put('/TypeIntervention/{id}/update', [TypeInterventionController::class, 'update'])->name('typeIntervention.update');
+
+/* Delete a specific Type Intervention */
+Route::delete('/TypeIntervention/{id}/delete', [TypeInterventionController::class, 'delete'])->name('typeIntervention.delete');
