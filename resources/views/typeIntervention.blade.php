@@ -2,6 +2,13 @@
 
 @section('content')
 
+{{-- Success message displayed after an action (add, update, delete, clear) --}}
+@if(session('success'))
+    <div class="alert alert-success">
+        {{ session('success') }}
+    </div>
+@endif
+
 {{-- Main title of the page --}}
 <h1 class="mb-4">List of Type Interventions</h1>
 </br>
