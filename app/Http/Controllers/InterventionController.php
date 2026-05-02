@@ -85,4 +85,18 @@ class InterventionController extends Controller
         // Redirect with success message
         return redirect()->route('Intervention.index', $intervention->IdCaserne)->with('success', 'Intervention updated successfully.');
     }
+
+    /*
+    |--------------------------------------------------------------------------
+    | Delete a specific Type Intervention
+    |--------------------------------------------------------------------------
+    */
+    public function delete($id)
+    {
+        // Retrieve and delete the type intervention
+        $intervention = Intervention::findOrFail($id);
+        $intervention->delete();
+
+        return redirect('Intervention.index', $intervention->IdCaserne)->with('success', 'Intervention successfully deleted');
+    }
 }
