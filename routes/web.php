@@ -66,5 +66,8 @@ Route::delete('/TypeIntervention/clear', [TypeInterventionController::class, 'cl
 | Each route points to a specific controller method.
 */
 
-/* Display the show form for a specific Intervention */
+/* Display the index form for a specific Intervention */
 Route::get('/Intervention/{id}/index', [InterventionController::class, 'index'])->name('Intervention.index');
+
+/* Display the show form for a specific Intervention */
+Route::get('/Intervention/{id}/show', [InterventionController::class, 'show'])->name('Intervention.show');
