@@ -61,5 +61,28 @@ class InterventionController extends Controller
     |--------------------------------------------------------------------------
     */
 
-    
+    public function update(Request $request, $id)
+    {
+        // Validate form inputs
+        $request->validate([
+            'DateTempsDebut' => 'required',
+            'Adresse' => 'required',
+            'Resume' => 'required',
+            'IdTypeIntervention' => 'required|exists:types,id',
+        ]);
+
+        // Retrieve the Intervation
+        $intervention = Intervention::findOrFail($id);
+
+        // Update the intervention
+        $intervention->update([
+            'DateTempsDebut' => $request->DateTempsDebut,
+            'Adresse' => $request->Adresse,
+            'Resume' => $request->Resume,
+            'IdTypeIntervention' => $request->IdTypeIntervention,
+        ]);
+
+        // Redirect with success message
+        return redirect()->route('intervention.show', $id)->with('success', 'Intervention updated successfully.');
+    }
 }
