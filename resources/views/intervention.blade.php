@@ -11,11 +11,12 @@
 
 {{-- Table displaying all  Intervention --}}
 <table class="table table-bordered table-striped">
-    <thead>
+    <thead class="table-dark">
         <tr>
             <th>ID</th>
             <th>Date & Heure</th>
             <th>Type</th>
+            <th style="width: 200px;">Actions</th>
         </tr>
 
     </thread>
@@ -26,6 +27,10 @@
             <td>{{ $inter->id }}</td>
             <td>{{ $inter->DateTempsDebut }}</td>
             <td>{{ $inter->type->description }}</td>
+            <td>
+                <a href="{{ route('intervention.show', $inter->id) }}" class="btn btn-primary btn-sm">
+                    View
+                </a>
         </tr>
         @endforeach
     </tbody>
