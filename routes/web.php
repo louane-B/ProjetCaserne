@@ -71,3 +71,9 @@ Route::get('/Intervention/{id}/index', [InterventionController::class, 'index'])
 
 /* Display the show form for a specific Intervention */
 Route::get('/Intervention/{id}/show', [InterventionController::class, 'show'])->name('Intervention.show');
+
+/* Display the edit form for a specific  Intervention */
+Route::get('/Intervention/{id}/edit', [InterventionController::class, 'formModifyIntervention'])->name('Intervention.edit');
+
+/* Update a specific  Intervention */
+Route::put('/Intervention/{id}/update', [TypeInterventionController::class, 'update'])->name('Intervention.update');
