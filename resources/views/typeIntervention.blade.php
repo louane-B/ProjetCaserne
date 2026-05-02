@@ -9,8 +9,24 @@
     </div>
 @endif
 
+
 {{-- Main title of the page --}}
 <h1 class="mb-4">List of Type Interventions</h1>
+</br>
+
+{{-- Button to clear (delete all) type intervention --}}
+<form action="{{ route('typeIntervention.clear') }}"
+        method="POST"
+        onsubmit="return confirm('Do you really want to delete ALL type interventions ?');"
+        class="mb-3">
+    @csrf
+    @method('DELETE')
+
+    <button type="submit" class="btn btn-danger">
+        Clear List
+    </button>
+</form>
+
 </br>
 <table class="table table-bordered table-striped">
     {{-- Table header --}}
