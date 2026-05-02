@@ -21,4 +21,18 @@ class InterventionController extends Controller
 
         return view('intervention', compact('caserne'));
     }
+
+    /*
+    |--------------------------------------------------------------------------
+    | Display the intervention
+    |--------------------------------------------------------------------------
+    | If the user is on "/Intervention/{id}/show".
+    | Otherwise, load the main interventions page.
+    */
+    public function show($id)
+    {
+        $intervention = Intervention::with(['type', 'caserne'])->findOrFail($id);
+
+        return view('interventionShow', compact('intervention'));
+    }
 }
