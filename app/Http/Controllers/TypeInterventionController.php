@@ -97,7 +97,7 @@ class TypeInterventionController extends Controller
         $intervention = TypeIntervention::findOrFail($id);
         $intervention->delete();
 
-        return redirect('/TypeIntervention')->with('success', 'Type Intervention successfully deleted');
+        return redirect('/TypeInterventions')->with('success', 'Type Intervention successfully deleted');
     }
 
 }
