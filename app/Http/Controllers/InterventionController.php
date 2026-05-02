@@ -19,6 +19,6 @@ class InterventionController extends Controller
         // Charger la caserne + ses interventions + le type de chaque intervention
         $caserne = FireStation::with(['interventions.type'])->findOrFail($id);
 
-        return view('intervention.index', compact('caserne'));
+        return view('intervention', compact('caserne'));
     }
 }
