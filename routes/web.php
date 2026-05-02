@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FireStationController;
 use App\Http\Controllers\TypeInterventionController;
+use App\Http\Controllers\InterventionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -66,4 +67,4 @@ Route::delete('/TypeIntervention/clear', [TypeInterventionController::class, 'cl
 */
 
 /* Display the show form for a specific Intervention */
-Route::get('/Intervention/{id}/show', [InterventionController::class, 'listInterventionByFireStation'])->name('Intervention.show');
+Route::get('/Intervention/{id}/index', [InterventionController::class, 'index'])->name('Intervention.index');

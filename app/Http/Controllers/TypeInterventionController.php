@@ -11,7 +11,7 @@ class TypeInterventionController extends Controller
     |--------------------------------------------------------------------------
     | Display the list of fire stations
     |--------------------------------------------------------------------------
-    | If the user is on "/", load the home page (app.blade.php).
+    | If the user is on "/TypeInterventions".
     | Otherwise, load the main TypeIntervention page.
     */
     public function index()

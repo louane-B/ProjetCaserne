@@ -45,7 +45,7 @@ class Intervention extends Model
     */
     public function type()
     {
-        return $this->belongTo(TypeIntervention::class, 'IdTypeIntervention');
+        return $this->belongsTo(TypeIntervention::class, 'IdTypeIntervention');
     }
 
     /*
