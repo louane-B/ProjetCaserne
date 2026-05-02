@@ -1,24 +1,24 @@
 @extends('layout')
 
 @section('content')
-<div class="container">
 
     {{-- Page title --}}
     <h1 class="text-center mb-4">Edit Intervention</h1>
     </br>
     </br>
-    <form action="{{ route('intervention.update', intervention->id) }}" method="POST">
+    {{-- Form to update an existing intervention --}}
+    <form action="{{ route('Intervention.update', $intervention->id) }}" method="POST" class="border p-4 bg-light rounded">
         @csrf
         @method('PUT')  {{-- Laravel method override for PUT requests --}}
 
         <div class="mb-3">
             <label class="form-label">Date & Time</label>
-            <input type="datetime-local" name="DateTempsDebut" class="form-control" value="{{ $intervention->DateTempsDebut }}">
+            <input type="datetime-local" name="DateTempsDebut" class="form-control" value="{{ $intervention->DateTempsDebut }}" required>
         </div>
 
         <div class="mb-3">
             <label class="form-label">Address</label>
-            <input type="text" name="Adresse" class="form-control" value="{{ $intervention->Adresse }}">
+            <input type="text" name="Adresse" class="form-control" value="{{ $intervention->Adresse }}" required>
         </div>
 
         <div class="mb-3">
@@ -35,10 +35,14 @@
                         {{ $type->description }}
                     </option>
                 @endforeach
-            </selected>
+            </select>
         </div>
+        {{-- Submit button --}}
+        <button type="submit" class="btn btn-primary w-100 mt-2">Save changes</button>
 
-        <button class="btn btn-primary">Save changes</button>
-        <a href="{{ route('intervention.show', $intervention->id) }}" class="btn btn-secondary">Cancel</a>
+        <a href="{{ route('Intervention.index', $intervention->IdCaserne) }}" class="btn btn-secondary w-100 mt-2">
+            Cancel
+        </a>
     </form>
-</div>
+
+@endsection

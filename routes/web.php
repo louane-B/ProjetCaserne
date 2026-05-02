@@ -76,4 +76,4 @@ Route::get('/Intervention/{id}/show', [InterventionController::class, 'show'])->
 Route::get('/Intervention/{id}/edit', [InterventionController::class, 'formModifyIntervention'])->name('Intervention.edit');
 
 /* Update a specific  Intervention */
-Route::put('/Intervention/{id}/update', [TypeInterventionController::class, 'update'])->name('Intervention.update');
+Route::put('/Intervention/{id}/update', [InterventionController::class, 'update'])->name('Intervention.update');

@@ -4,13 +4,6 @@
 
 <div class="container">
 
-    {{-- Success message displayed after an action (add, update, delete, clear) --}}
-    @if(session('success'))
-        <div class="alert alert-success">
-            {{ session('success') }}
-        </div>
-    @endif
-
     <h2 class="mb-4 text-center">Intervention sheet</h2>
 
     <div class="card p-4">

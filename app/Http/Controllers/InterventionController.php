@@ -68,7 +68,7 @@ class InterventionController extends Controller
             'DateTempsDebut' => 'required',
             'Adresse' => 'required',
             'Resume' => 'required',
-            'IdTypeIntervention' => 'required|exists:types,id',
+            'IdTypeIntervention' => 'required|exists:interventions,id',
         ]);
 
         // Retrieve the Intervation
@@ -83,6 +83,6 @@ class InterventionController extends Controller
         ]);
 
         // Redirect with success message
-        return redirect()->route('intervention.show', $id)->with('success', 'Intervention updated successfully.');
+        return redirect()->route('Intervention.index', $intervention->IdCaserne)->with('success', 'Intervention updated successfully.');
     }
 }

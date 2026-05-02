@@ -2,11 +2,18 @@
 
 @section('content')
 
-<div class="container">
 
 {{-- Main title of the page --}}
 <h2 class="mb-4">Interventions for Station {{ $caserne->name }}</h2>
 </br>
+
+ {{-- Success message displayed after an action (add, update, delete, clear) --}}
+    @if(session('success'))
+        <div class="alert alert-success">
+            {{ session('success') }}
+        </div>
+    @endif
+
 </br>
 
 {{-- Table displaying all  Intervention --}}
@@ -34,7 +41,7 @@
                 </a>
 
                 {{-- Edit button --}}
-                <a href="{{ route('Intervention.edit', $types->id) }}" class="btn btn-warning btn_sm">
+                <a href="{{ route('Intervention.edit', $inter->id) }}" class="btn btn-warning btn_sm">
                     Modifier
                 </a>
         </tr>
@@ -42,5 +49,4 @@
     </tbody>
 </table>
 
-</div>
 @endsection
