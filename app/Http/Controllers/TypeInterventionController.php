@@ -86,4 +86,17 @@ class TypeInterventionController extends Controller
         return redirect('/TypeInterventions')->with('success', 'Type Intervention successfully updated');
     }
 
+     /*
+    |--------------------------------------------------------------------------
+    | Delete a specific Type Intervention
+    |--------------------------------------------------------------------------
+    */
+    public function delete($id)
+    {
+        // Retrieve and delete the type intervention
+        $intervention = formModifyTypeIntervention::findOrFail($id);
+        $intervention->delete();
+
+        return redirect('/TypeIntervention')->with('success', 'Type Intervention successfully deleted');
+    }
 }
