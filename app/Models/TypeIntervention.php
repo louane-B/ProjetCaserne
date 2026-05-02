@@ -28,4 +28,16 @@ class TypeIntervention extends Model
         'description',
     ];
 
+     /*
+    |--------------------------------------------------------------------------
+    | Relationships
+    |--------------------------------------------------------------------------
+    | A type intervention can be associated with multiple interventions.
+    | This defines a one-to-many relationship.
+    */
+    public function interventions()
+    {
+        return $this->hasMany(Intervention::class, 'IdTypeIntervention');
+    }
+
 }

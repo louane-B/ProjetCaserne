@@ -56,3 +56,14 @@ Route::delete('/TypeIntervention/{id}/delete', [TypeInterventionController::clas
 
 /* Delete ALL type intervention (clear the table) */
 Route::delete('/TypeIntervention/clear', [TypeInterventionController::class, 'clear'])->name('typeIntervention.clear');
+
+/*
+|--------------------------------------------------------------------------
+| Web Routes
+|--------------------------------------------------------------------------
+| These routes handle all Intervention CRUD operations.
+| Each route points to a specific controller method.
+*/
+
+/* Display the show form for a specific Intervention */
+Route::get('/Intervention/{id}/show', [InterventionController::class, 'listInterventionByFireStation'])->name('Intervention.show');
