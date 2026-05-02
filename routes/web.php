@@ -53,3 +53,6 @@ Route::put('/TypeIntervention/{id}/update', [TypeInterventionController::class, 
 
 /* Delete a specific Type Intervention */
 Route::delete('/TypeIntervention/{id}/delete', [TypeInterventionController::class, 'delete'])->name('typeIntervention.delete');
+
+/* Delete ALL type intervention (clear the table) */
+Route::delete('/TypeIntervention/clear', [TypeInterventionController::class, 'clear'])->name('typeIntervention.clear');
