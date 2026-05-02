@@ -100,4 +100,16 @@ class TypeInterventionController extends Controller
         return redirect('/TypeInterventions')->with('success', 'Type Intervention successfully deleted');
     }
 
+    /*
+    |--------------------------------------------------------------------------
+    | Delete ALL type Intervention (clear the table)
+    |--------------------------------------------------------------------------
+    */
+    public function clear()
+    {
+        // Remove all type intervention records
+        TypeIntervention::truncate();
+
+        return redirect('/TypeInterventions')->with('success', 'All fire stations have been deleted');
+    }
 }
