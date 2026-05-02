@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\FireStation;
 use App\Models\Intervention;
+use App\Models\TypeIntervention;
 use Illuminate\Http\Request;
 
 class InterventionController extends Controller
@@ -36,4 +37,29 @@ class InterventionController extends Controller
 
         return view('interventionShow', compact('intervention'));
     }
+
+    /*
+    |--------------------------------------------------------------------------
+    | Display the edit form for a Intervention
+    |--------------------------------------------------------------------------
+    */
+
+    public function formModifyIntervention($id)
+    {
+        $intervention = Intervention::with(['type', 'caserne'])->findOrFail($id);
+
+        // To display a drop-down list of types
+        $types = TypeIntervention::all();
+
+        return view('interventionModify', compact('intervention', 'types'));
+    }
+
+
+     /*
+    |--------------------------------------------------------------------------
+    | Update an existing Intervention
+    |--------------------------------------------------------------------------
+    */
+
+    
 }
