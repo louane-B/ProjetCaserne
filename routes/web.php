@@ -77,3 +77,6 @@ Route::get('/Intervention/{id}/edit', [InterventionController::class, 'formModif
 
 /* Update a specific  Intervention */
 Route::put('/Intervention/{id}/update', [InterventionController::class, 'update'])->name('Intervention.update');
+
+/* Delete a specific  Intervention */
+Route::delete('/Intervention/{id}/delete', [InterventionController::class, 'delete'])->name('Intervention.delete');

@@ -88,7 +88,7 @@ class InterventionController extends Controller
 
     /*
     |--------------------------------------------------------------------------
-    | Delete a specific Type Intervention
+    | Delete a specific  Intervention
     |--------------------------------------------------------------------------
     */
     public function delete($id)
