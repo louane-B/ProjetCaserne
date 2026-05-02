@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\FireStation;
+use App\Models\Intervention;
 use Illuminate\Http\Request;
 
 class InterventionController extends Controller

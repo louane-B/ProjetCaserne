@@ -57,6 +57,6 @@ class Intervention extends Model
     */
     public function caserne()
     {
-        return $this->belongTo(FireStation::class, 'IdCaserne');
+        return $this->belongsTo(FireStation::class, 'IdCaserne');
     }
 }

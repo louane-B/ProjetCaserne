@@ -28,7 +28,7 @@
             <td>{{ $inter->DateTempsDebut }}</td>
             <td>{{ $inter->type->description }}</td>
             <td>
-                <a href="{{ route('intervention.show', $inter->id) }}" class="btn btn-primary btn-sm">
+                <a href="{{ route('Intervention.show', $inter->id) }}" class="btn btn-primary btn-sm">
                     View
                 </a>
         </tr>
