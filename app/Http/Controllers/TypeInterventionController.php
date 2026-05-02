@@ -94,9 +94,10 @@ class TypeInterventionController extends Controller
     public function delete($id)
     {
         // Retrieve and delete the type intervention
-        $intervention = formModifyTypeIntervention::findOrFail($id);
+        $intervention = TypeIntervention::findOrFail($id);
         $intervention->delete();
 
         return redirect('/TypeIntervention')->with('success', 'Type Intervention successfully deleted');
     }
+
 }
