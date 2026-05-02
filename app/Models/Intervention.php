@@ -35,11 +35,26 @@ class Intervention extends Model
         'IdCaserne',
     ];
 
+
+    /*
+    |--------------------------------------------------------------------------
+    | Relationships
+    |--------------------------------------------------------------------------
+    | A intervention belongs to a single type intervention.
+    | This defines a many-to-one relationship.
+    */
     public function type()
     {
         return $this->belongTo(TypeIntervention::class, 'IdTypeIntervention');
     }
 
+    /*
+    |--------------------------------------------------------------------------
+    | Relationships
+    |--------------------------------------------------------------------------
+    | A intervention belongs to a single fire station.
+    | This defines a many-to-one relationship.
+    */
     public function caserne()
     {
         return $this->belongTo(FireStation::class, 'IdCaserne');
