@@ -28,8 +28,14 @@
             <td>{{ $inter->DateTempsDebut }}</td>
             <td>{{ $inter->type->description }}</td>
             <td>
+                {{-- View button --}}
                 <a href="{{ route('Intervention.show', $inter->id) }}" class="btn btn-primary btn-sm">
                     View
+                </a>
+
+                {{-- Edit button --}}
+                <a href="{{ route('Intervention.edit', $types->id) }}" class="btn btn-warning btn_sm">
+                    Modifier
                 </a>
         </tr>
         @endforeach
