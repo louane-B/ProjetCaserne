@@ -97,6 +97,6 @@ class InterventionController extends Controller
         $intervention = Intervention::findOrFail($id);
         $intervention->delete();
 
-        return redirect('Intervention.index', $intervention->IdCaserne)->with('success', 'Intervention successfully deleted');
+        return redirect()->route('Intervention.index', $intervention->IdCaserne)->with('success', 'Intervention successfully deleted');
     }
 }

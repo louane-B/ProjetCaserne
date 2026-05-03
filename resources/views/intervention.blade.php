@@ -41,9 +41,21 @@
                 </a>
 
                 {{-- Edit button --}}
-                <a href="{{ route('Intervention.edit', $inter->id) }}" class="btn btn-warning btn_sm">
+                <a href="{{ route('Intervention.edit', $inter->id) }}" class="btn btn-warning btn-sm">
                     Modifier
                 </a>
+
+                {{-- Delete button --}} 
+                    <form action="{{ route('Intervention.delete', $inter->id) }}"
+                        method="POST"
+                        style="display:inline-block;"
+                        onsubmit="return confirm('Do you really want to delete this Intervention?');">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" class="btn btn-danger btn-sm">
+                            Delete
+                        </button>
+                    </form>
         </tr>
         @endforeach
     </tbody>

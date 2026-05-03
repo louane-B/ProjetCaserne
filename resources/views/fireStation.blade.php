@@ -75,7 +75,7 @@
                     </form>
 
                     <a href="{{ route('Intervention.index', $station->id) }}" class="btn btn-info btn_sm">
-                        see interventions
+                        Show interventions
                     </a>
                 </td>
             </tr>
