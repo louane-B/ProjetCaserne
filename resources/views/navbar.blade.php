@@ -11,6 +11,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/FireStations">Fire Stations</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/TypeInterventions">Type Interventions</a>
+                </li>
             </ul>
         </div>
     </div>
