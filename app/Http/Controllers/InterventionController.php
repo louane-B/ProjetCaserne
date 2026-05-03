@@ -99,4 +99,17 @@ class InterventionController extends Controller
 
         return redirect()->route('Intervention.index', $intervention->IdCaserne)->with('success', 'Intervention successfully deleted');
     }
+
+    /*
+    |--------------------------------------------------------------------------
+    | Delete ALL Intervention (clear the table)
+    |--------------------------------------------------------------------------
+    */
+    public function clear()
+    {
+        // Remove all  intervention records
+        Intervention::truncate();
+
+        return redirect('/FireStations')->with('success', 'All Intervention have been deleted');
+    }
 }

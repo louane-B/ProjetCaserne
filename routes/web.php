@@ -80,3 +80,6 @@ Route::put('/Intervention/{id}/update', [InterventionController::class, 'update'
 
 /* Delete a specific  Intervention */
 Route::delete('/Intervention/{id}/delete', [InterventionController::class, 'delete'])->name('Intervention.delete');
+
+/* Delete ALL Intervention (clear the table) */
+Route::delete('/Intervention/clear', [InterventionController::class, 'clear'])->name('Intervention.clear');

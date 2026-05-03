@@ -22,7 +22,20 @@
     @method('DELETE')
 
     <button type="submit" class="btn btn-danger">
-        Clear List
+        Clear all Fire Stations 
+    </button>
+</form>
+
+{{-- Button to clear (delete all) intervention --}}
+<form action="{{ route('Intervention.clear') }}"
+        method="POST"
+        onsubmit="return confirm('Do you really want to delete ALL intervention ?');"
+        class="mb-3">
+    @csrf
+    @method('DELETE')
+
+    <button type="submit" class="btn btn-danger">
+        Clear all interventions
     </button>
 </form>
 
