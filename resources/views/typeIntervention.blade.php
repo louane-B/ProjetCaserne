@@ -2,6 +2,13 @@
 
 @section('content')
 
+{{-- Success message displayed after an action (add, update, delete, clear) --}}
+@if(session('success'))
+    <div class="alert alert-success">
+        {{ session('success') }}
+    </div>
+@endif
+
 {{-- Main title of the page --}}
 <h1 class="mb-4">List of Type Interventions</h1>
 </br>
@@ -11,6 +18,7 @@
         <tr>
             <th>Intervention Number</th>
             <th>Description</th>
+            <th style="width: 200px;">Actions</th>
         </tr>
     </thread>
 
@@ -22,6 +30,11 @@
                 <td>{{ $intervention->NoIntervention }}</td>
                 {{-- Type Intervention description --}}
                 <td>{{ $intervention->description }}</td>
+                <td>
+                    {{-- Edit button --}}
+                    <a href="{{ route('typeIntervention.edit', $intervention->id) }}" class="btn btn-warning btn_sm">
+                        Modifier
+                    </a>
             </tr>
         @endforeach
     </tbody>

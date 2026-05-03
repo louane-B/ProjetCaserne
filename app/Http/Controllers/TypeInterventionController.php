@@ -46,4 +46,44 @@ class TypeInterventionController extends Controller
         //Redirect with success message
         return redirect('/TypeInterventions')->with('success', 'Type Intervention successfully added');
     }
+
+    /*
+    |--------------------------------------------------------------------------
+    | Display the edit form for type intervention
+    |--------------------------------------------------------------------------
+    */
+    public function formModifyTypeIntervention($id)
+    {
+        // Retrieve the fire station or fail if not found
+        $intervention = TypeIntervention::findOrFail($id);
+
+        return view('typeInterventionModify', compact('intervention'));
+    }
+
+     /*
+    |--------------------------------------------------------------------------
+    | Update an existing type Intervention
+    |--------------------------------------------------------------------------
+    */
+    public function update($id, Request $request)
+    {
+        // Validate form inputs
+        $request->validate([
+            'NoIntervention' => 'required',
+            'description' => 'required',
+        ]);
+
+        // Retrieve the fire station
+        $intervention = TypeIntervention::findOrFail($id);
+
+        // Update the type Intervention
+        $intervention->update([
+            'NoIntervention' => $request->NoIntervention,
+            'description' => $request->description,
+        ]);
+
+        // Redirect with success message
+        return redirect('/TypeInterventions')->with('success', 'Type Intervention successfully updated');
+    }
+
 }
