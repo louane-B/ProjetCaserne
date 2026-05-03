@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use App\Models\State;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class FireStation extends Model
@@ -16,6 +17,8 @@ class FireStation extends Model
     | for the fields listed in $fillable.
     */
 
+    use HasFactory;
+    
     // Disable created_at and updated_at timestamps
     public $timestamps = false;
 
