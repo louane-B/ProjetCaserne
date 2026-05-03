@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\FireStation;
+use App\Models\State;
 use Illuminate\Http\Request;
 
 class FireStationController extends Controller
@@ -67,7 +68,7 @@ class FireStationController extends Controller
         // Retrieve the fire station or fail if not found
         $station = FireStation::findOrFail($id);
         // Load all states for the dropdown
-        $states = \App\Models\State::all();
+        $states = State::all();
 
         return view('fireStationModify', compact('station', 'states'));
     }

@@ -2,60 +2,61 @@
 
 namespace App\Models;
 
-use App\Models\State;
-use App\Models\Intervention;
+use App\Models\TypeIntervention;
+use App\Models\FireStation;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class FireStation extends Model
+class Intervention extends Model
 {
-    /*
+     /*
     |--------------------------------------------------------------------------
     | Model Configuration
     |--------------------------------------------------------------------------
-    | This model represents the "fire_stations" table.
+    | This model represents the "interventions" table.
     | It does not use timestamps and allows mass assignment
     | for the fields listed in $fillable.
     */
 
     use HasFactory;
-    
+
     // Disable created_at and updated_at timestamps
     public $timestamps = false;
 
     // Explicit table name (optional but clear)
-    protected $table = 'fire_stations';
+    protected $table = 'interventions';
 
     // Fields that can be mass-assigned
     protected $fillable = [
-        'name',
-        'adress',
-        'city',
-        'phone',
-        'state_id',
+        'DateTempsDebut',
+        'Adresse',
+        'Resume',
+        'IdTypeIntervention',
+        'IdCaserne',
     ];
-    
+
+
     /*
     |--------------------------------------------------------------------------
     | Relationships
     |--------------------------------------------------------------------------
-    | A fire station belongs to a single state.
+    | A intervention belongs to a single type intervention.
     | This defines a many-to-one relationship.
     */
-    public function state()
+    public function type()
     {
-        return $this->belongsTo(State::class);
+        return $this->belongsTo(TypeIntervention::class, 'IdTypeIntervention');
     }
 
     /*
     |--------------------------------------------------------------------------
     | Relationships
     |--------------------------------------------------------------------------
-    | A fire station can be associated with multiple interventions.
-    | This defines a one-to-many relationship.
+    | A intervention belongs to a single fire station.
+    | This defines a many-to-one relationship.
     */
-    public function interventions()
+    public function caserne()
     {
-        return $this->hasMany(Intervention::class, 'IdCaserne');
+        return $this->belongsTo(FireStation::class, 'IdCaserne');
     }
 }

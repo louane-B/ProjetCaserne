@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FireStationController;
 use App\Http\Controllers\TypeInterventionController;
+use App\Http\Controllers\InterventionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -48,5 +49,34 @@ Route::post('/TypeIntervention/add', [TypeInterventionController::class, 'add'])
 /* Display the edit form for a specific Type Intervention */
 Route::get('/TypeIntervention/{id}/edit', [TypeInterventionController::class, 'formModifyTypeIntervention'])->name('typeIntervention.edit');
 
-/* Update a specific fire station */
+/* Update a specific Type Intervention */
 Route::put('/TypeIntervention/{id}/update', [TypeInterventionController::class, 'update'])->name('typeIntervention.update');
+
+/* Delete a specific Type Intervention */
+Route::delete('/TypeIntervention/{id}/delete', [TypeInterventionController::class, 'delete'])->name('typeIntervention.delete');
+
+/* Delete ALL type intervention (clear the table) */
+Route::delete('/TypeIntervention/clear', [TypeInterventionController::class, 'clear'])->name('typeIntervention.clear');
+
+/*
+|--------------------------------------------------------------------------
+| Web Routes
+|--------------------------------------------------------------------------
+| These routes handle all Intervention CRUD operations.
+| Each route points to a specific controller method.
+*/
+
+/* Display the index form for a specific Intervention */
+Route::get('/Intervention/{id}/index', [InterventionController::class, 'index'])->name('Intervention.index');
+
+/* Display the show form for a specific Intervention */
+Route::get('/Intervention/{id}/show', [InterventionController::class, 'show'])->name('Intervention.show');
+
+/* Display the edit form for a specific  Intervention */
+Route::get('/Intervention/{id}/edit', [InterventionController::class, 'formModifyIntervention'])->name('Intervention.edit');
+
+/* Update a specific  Intervention */
+Route::put('/Intervention/{id}/update', [InterventionController::class, 'update'])->name('Intervention.update');
+
+/* Delete a specific  Intervention */
+Route::delete('/Intervention/{id}/delete', [InterventionController::class, 'delete'])->name('Intervention.delete');

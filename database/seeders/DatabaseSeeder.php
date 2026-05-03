@@ -19,6 +19,7 @@ class DatabaseSeeder extends Seeder
             StateSeeder::class,
             TypeInterventionSeeder::class,
             FireStationSeeder::class,
+            InterventionSeeder::class,
         ]);
     }
 }

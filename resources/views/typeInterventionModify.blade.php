@@ -27,7 +27,7 @@
     <button type="submit" class="btn btn-primary w-100">Update Type Intervention</button>
 
     {{-- Back button --}}
-    <a href="/TypeIntervention" class="btn btn-secondary w-100 mt-2">Back</a>
+    <a href="/TypeInterventions" class="btn btn-secondary w-100 mt-2">Back</a>
 </form>
 
 @endsection

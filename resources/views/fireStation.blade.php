@@ -73,6 +73,10 @@
                             Delete
                         </button>
                     </form>
+
+                    <a href="{{ route('Intervention.index', $station->id) }}" class="btn btn-info btn_sm">
+                        Show interventions
+                    </a>
                 </td>
             </tr>
         @endforeach

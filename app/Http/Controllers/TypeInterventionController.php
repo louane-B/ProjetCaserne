@@ -11,7 +11,7 @@ class TypeInterventionController extends Controller
     |--------------------------------------------------------------------------
     | Display the list of fire stations
     |--------------------------------------------------------------------------
-    | If the user is on "/", load the home page (app.blade.php).
+    | If the user is on "/TypeInterventions".
     | Otherwise, load the main TypeIntervention page.
     */
     public function index()
@@ -86,4 +86,30 @@ class TypeInterventionController extends Controller
         return redirect('/TypeInterventions')->with('success', 'Type Intervention successfully updated');
     }
 
+     /*
+    |--------------------------------------------------------------------------
+    | Delete a specific Type Intervention
+    |--------------------------------------------------------------------------
+    */
+    public function delete($id)
+    {
+        // Retrieve and delete the type intervention
+        $intervention = TypeIntervention::findOrFail($id);
+        $intervention->delete();
+
+        return redirect('/TypeInterventions')->with('success', 'Type Intervention successfully deleted');
+    }
+
+    /*
+    |--------------------------------------------------------------------------
+    | Delete ALL type Intervention (clear the table)
+    |--------------------------------------------------------------------------
+    */
+    public function clear()
+    {
+        // Remove all type intervention records
+        TypeIntervention::truncate();
+
+        return redirect('/TypeInterventions')->with('success', 'All fire stations have been deleted');
+    }
 }
