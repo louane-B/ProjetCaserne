@@ -26,5 +26,30 @@
         @endforeach
     </tbody>
 </table>
+</br>
+<hr class="my-4">
+
+{{-- Section title for adding a new type intervention --}}
+<h2 class="mb-4 text-center">Add a New Type Intervention</h2>
+
+{{-- Form to add a new Type Intervention --}}
+<form action="{{ route('typeIntervention.add') }}" method="POST" class="border p-4 rounded bg-light">
+    @csrf 
+
+    {{-- Type Intervention number --}}
+    <div class="mb-3">
+        <label class="form-label">Type Intervention number</label>
+        <input type="int" name="NoIntervention" class="form-control" required>
+    </div>
+
+    {{-- description --}}
+    <div class="mb-3">
+        <label class="form-label">Description</label>
+        <input type="text" name="description" class="form-control" required>
+    </div>
+
+    <button type="Submit" class="btn btn-primary w-100">Add Type Intervention</button>
+
+</form>
 
 @endsection

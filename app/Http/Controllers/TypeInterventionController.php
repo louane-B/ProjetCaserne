@@ -22,4 +22,28 @@ class TypeInterventionController extends Controller
         // Otherwise, show the Type intervention list page
         return view('typeIntervention', compact('typeInterventions'));
     }
+
+     /*
+    |--------------------------------------------------------------------------
+    | Add a new type intervention
+    |--------------------------------------------------------------------------
+    | Validates the form, creates a new record, then redirects with a success message.
+    */
+    public function add(Request $request)
+    {
+        //validate form inputs
+        $request->validate([
+            'NoIntervention' => 'required',
+            'description' => 'required',
+        ]);
+
+        //Create the new Type Intervention
+        TypeIntervention::create([
+            'NoIntervention'=>$request->NoIntervention,
+            'description'=>$request->description,
+        ]);
+
+        //Redirect with success message
+        return redirect('/TypeInterventions')->with('success', 'Type Intervention successfully added');
+    }
 }

@@ -25,7 +25,7 @@ class TypeInterventionSeeder extends Seeder
             ['NoIntervention' => '63', 'description' => 'Foudre (Investigation)'],
             ['NoIntervention' => '64', 'description' => 'Incendie Maritime / de Bateau'],
             ['NoIntervention' => '65', 'description' => 'Aide Mutuelle / Assistance Autre Service'],
-            ['NoIntervention' => '66', 'description' => 'Odeaur (Etrange / Inconnue)'],
+            ['NoIntervention' => '66', 'description' => 'Odeur (Etrange / Inconnue)'],
             ['NoIntervention' => '67', 'description' => 'Incendie Extérieur'],
             ['NoIntervention' => '68', 'description' => 'Investigation de Fumée (Extérieur)'],
             ['NoIntervention' => '69', 'description' => 'Incendie de Structure / Batiment'],
