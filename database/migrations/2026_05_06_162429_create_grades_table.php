@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('grades', function (Blueprint $table) {
             $table->id();
             $table->string('description');
-            $table->string('symbole')->nullable(); // symbole unicode or HTML
+            $table->string('symbol')->nullable(); // symbole unicode or HTML
             $table->timestamps();
         });
     }
