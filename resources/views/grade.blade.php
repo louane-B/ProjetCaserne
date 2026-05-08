@@ -14,6 +14,7 @@
         <tr>
             <th>Description</th>
             <th>Symbol</th>
+            <th style="width: 200px;">Actions</th>
         </tr>
 
     </thread>
@@ -23,6 +24,19 @@
         <tr>
             <td>{{ $grade->description }}</td>
             <td>{!! $grade->symbol !!}</td>
+            <td>
+                {{-- Delete button --}} 
+                    <form action="{{ route('grade.delete', $grade->id) }}"
+                        method="POST"
+                        style="display:inline-block;"
+                        onsubmit="return confirm('Do you really want to delete this Grade?');">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" class="btn btn-danger btn-sm">
+                            Delete
+                        </button>
+                    </form>
+            </td>
         </tr>
         @endforeach
     </tbody>
