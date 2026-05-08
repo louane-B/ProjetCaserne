@@ -101,3 +101,7 @@ Route::post('/grades/add', [GradeController::class, 'add'])->name('grade.add');
 
 /* Delete a specific grade */
 Route::delete('/gradess/{id}/delete', [GradeController::class, 'delete'])->name('grade.delete');
+
+/* Delete ALL fire stations (clear the table) */
+Route::delete('/grades/clear', [GradeController::class, 'clear'])->name('grade.clear');
+
