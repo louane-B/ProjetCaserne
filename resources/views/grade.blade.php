@@ -13,7 +13,18 @@
     </div>
 @endif
 
+{{-- Button to clear (delete all) grade --}}
+<form action="{{ route('grade.clear') }}"
+        method="POST"
+        onsubmit="return confirm('Do you really want to delete ALL Grades ?');"
+        class="mb-3">
+    @csrf
+    @method('DELETE')
 
+    <button type="submit" class="btn btn-danger">
+        Clear all
+    </button>
+</form>
 
 </br>
 
