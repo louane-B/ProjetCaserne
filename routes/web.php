@@ -83,3 +83,14 @@ Route::delete('/Intervention/{id}/delete', [InterventionController::class, 'dele
 
 /* Delete ALL Intervention (clear the table) */
 Route::delete('/Intervention/clear', [InterventionController::class, 'clear'])->name('Intervention.clear');
+
+/*
+|--------------------------------------------------------------------------
+| Web Routes
+|--------------------------------------------------------------------------
+| These routes handle all Grade CRUD operations.
+| Each route points to a specific controller method.
+*/
+
+/* Display list of Grade */
+Route::get('/grades', [GradeController::class, 'index'])->name('grade.index');
