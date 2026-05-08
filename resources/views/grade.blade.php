@@ -6,6 +6,14 @@
 <h2 class="mb-4">list of grade</h2>
 </br>
 
+{{-- Success message displayed after an action (add, update, delete, clear) --}}
+@if(session('success'))
+    <div class="alert alert-success">
+        {{ session('success') }}
+    </div>
+@endif
+
+
 </br>
 
 {{-- Table displaying all  grade --}}
