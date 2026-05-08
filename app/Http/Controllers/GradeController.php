@@ -57,7 +57,7 @@ class GradeController extends Controller
         $grade = Grade::findOrFail($id);
         $grade->delete();
 
-        return redirect('/grades')->with('success', 'Fire station successfully deleted');
+        return redirect('/grades')->with('success', 'Grade successfully deleted');
     }
 
     /*
