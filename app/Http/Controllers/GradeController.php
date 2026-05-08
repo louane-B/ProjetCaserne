@@ -43,6 +43,6 @@ class GradeController extends Controller
         ]);
 
         // Redirect with success message
-        return redirect('/grade')->with('success', 'Grade successfully added');
+        return redirect('/grades')->with('success', 'Grade successfully added');
     }
 }
