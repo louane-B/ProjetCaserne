@@ -22,7 +22,7 @@
         @foreach($grades as $grade)
         <tr>
             <td>{{ $grade->description }}</td>
-            <td>{{ $inter->symbol }}</td>
+            <td>{!! $grade->symbol !!}</td>
         </tr>
         @endforeach
     </tbody>
