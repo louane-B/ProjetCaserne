@@ -18,6 +18,6 @@ class GradeController extends Controller
         $grades = Grade::all();
         
         // Otherwise, show the FireStations list page
-        return view('grade', compact('gradess'));
+        return view('grade', compact('grades'));
     }
 }
