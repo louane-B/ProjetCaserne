@@ -60,4 +60,17 @@ class GradeController extends Controller
         return redirect('/grades')->with('success', 'Fire station successfully deleted');
     }
 
+    /*
+    |--------------------------------------------------------------------------
+    | Delete ALL Intervention (clear the table)
+    |--------------------------------------------------------------------------
+    */
+    public function clear()
+    {
+        // Remove all  intervention records
+        Grade::truncate();
+
+        return redirect('/grades')->with('success', 'All Grade have been deleted');
+    }
+
 }
