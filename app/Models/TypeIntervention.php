@@ -37,7 +37,7 @@ class TypeIntervention extends Model
     */
     public function interventions()
     {
-        return $this->hasMany(Intervention::class, 'IdTypeIntervention');
+        return $this->hasMany(Intervention::class, 'type_intervention_id');
     }
 
 }

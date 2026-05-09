@@ -31,8 +31,8 @@ class Intervention extends Model
         'DateTempsDebut',
         'Adresse',
         'Resume',
-        'IdTypeIntervention',
-        'IdCaserne',
+        'type_intervention_id',
+        'fire_station_id',
     ];
 
 
