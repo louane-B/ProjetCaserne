@@ -26,10 +26,10 @@ class Firefighter extends Model
     // Fields that can be mass-assigned
     protected $fillable = [
         'matricule',
-        'grade',
+        'grade_id',
         'nom',
         'prenom',
-        'IdCaserne',
+        'fire_station_id',
     ];
     
     /*
@@ -53,6 +53,6 @@ class Firefighter extends Model
     */
     public function station()
     {
-        return $this->belongsTo(FireStation::class);
+        return $this->belongsTo(FireStation::class, 'fire_station_id');
     }
 }

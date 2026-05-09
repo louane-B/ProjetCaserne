@@ -14,14 +14,13 @@ return new class extends Migration
         Schema::create('firefighters', function (Blueprint $table) {
             $table->id();
             $table->string('matricule');
-            $table->foreignId('grade')                           // Foreign key to grades table
-                ->constrained('grades')
-                ->onDelete('cascade');
+
+            $table->foreignId('grade_id')->constrained('grades')->onDelete('cascade');      // Foreign key to grades table
+
             $table->string('nom');
             $table->string('prenom');
-            $table->foreignId('IdCaserne')                      // Foreign key to fireStations table
-                ->constraigned('fire_stations')
-                ->onDelete('cascade');
+
+            $table->foreignId('fire_station_id')->constrained('fire_stations')->onDelete('cascade');   // Foreign key to fireStations table
             $table->timestamps();
         });
     }
