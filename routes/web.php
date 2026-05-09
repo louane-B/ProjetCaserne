@@ -105,3 +105,13 @@ Route::delete('/gradess/{id}/delete', [GradeController::class, 'delete'])->name(
 /* Delete ALL fire stations (clear the table) */
 Route::delete('/grades/clear', [GradeController::class, 'clear'])->name('grade.clear');
 
+/*
+|--------------------------------------------------------------------------
+| Web Routes
+|--------------------------------------------------------------------------
+| These routes handle all firefighter CRUD operations.
+| Each route points to a specific controller method.
+*/
+
+/* Display list of firefighter */
+Route::get('/firefighters', [FirefighterController::class, 'index'])->name('firefighter.index');
