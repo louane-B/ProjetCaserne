@@ -4,6 +4,7 @@ namespace App\Models;
 
 use App\Models\Grade;
 use App\Models\FireStation;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Firefighter extends Model
@@ -16,6 +17,8 @@ class Firefighter extends Model
     | It does not use timestamps and allows mass assignment
     | for the fields listed in $fillable.
     */
+
+    use HasFactory;
 
      // Disable created_at and updated_at timestamps
     public $timestamps = false;
