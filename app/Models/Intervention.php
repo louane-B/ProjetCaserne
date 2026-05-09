@@ -45,7 +45,7 @@ class Intervention extends Model
     */
     public function type()
     {
-        return $this->belongsTo(TypeIntervention::class, 'IdTypeIntervention');
+        return $this->belongsTo(TypeIntervention::class, 'type_intervention_id');
     }
 
     /*
@@ -57,6 +57,6 @@ class Intervention extends Model
     */
     public function caserne()
     {
-        return $this->belongsTo(FireStation::class, 'IdCaserne');
+        return $this->belongsTo(FireStation::class, 'fire_station_id');
     }
 }
