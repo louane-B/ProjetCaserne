@@ -58,4 +58,16 @@ class FireStation extends Model
     {
         return $this->hasMany(Intervention::class, 'IdCaserne');
     }
+
+    /*
+    |--------------------------------------------------------------------------
+    | Relationships
+    |--------------------------------------------------------------------------
+    | A fire station can be associated with multiple firefighter.
+    | This defines a one-to-many relationship.
+    */
+    public function firefighter()
+    {
+        return $this->hasMany(Firefighter::class, 'IdCaserne');
+    }
 }

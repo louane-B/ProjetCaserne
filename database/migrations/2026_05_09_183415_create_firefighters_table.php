@@ -19,7 +19,7 @@ return new class extends Migration
                 ->onDelete('cascade');
             $table->string('nom');
             $table->string('prenom');
-            $table->foreignId('IdCaserne')
+            $table->foreignId('IdCaserne')                      // Foreign key to fireStations table
                 ->constraigned('fire_stations')
                 ->onDelete('cascade');
             $table->timestamps();
