@@ -5,6 +5,7 @@ use App\Http\Controllers\FireStationController;
 use App\Http\Controllers\TypeInterventionController;
 use App\Http\Controllers\InterventionController;
 use App\Http\Controllers\GradeController;
+use App\Http\Controllers\FirefighterController;
 
 /*
 |--------------------------------------------------------------------------

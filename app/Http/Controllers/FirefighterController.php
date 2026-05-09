@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Firefighter;
 use Illuminate\Http\Request;
 
 class FirefighterController extends Controller
@@ -15,7 +16,7 @@ class FirefighterController extends Controller
     public function index()
     {
         // Load all fire stations with their associated state
-        $firefighter = Firefighter::with(['grade', 'station'])->get();
+        $firefighters = Firefighter::with(['grade', 'station'])->get();
         
         // Otherwise, show the FireStations list page
         return view('firefighter', compact('firefighters'));
