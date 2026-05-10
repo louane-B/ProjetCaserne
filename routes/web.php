@@ -118,4 +118,4 @@ Route::delete('/grades/clear', [GradeController::class, 'clear'])->name('grade.c
 Route::get('/firefighters', [FirefighterController::class, 'index'])->name('firefighter.index');
 
 /* Add a new Firefighter */
-Route::post('/grades/add', [FirefighterController::class, 'add'])->name('firefighter.add');
+Route::post('/firefighters/add', [FirefighterController::class, 'add'])->name('firefighter.add');

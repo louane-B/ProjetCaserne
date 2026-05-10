@@ -6,6 +6,13 @@
 <h1 class="mb-4">List of Type Interventions</h1>
 </br>
 
+{{-- Success message displayed after an action (add, update, delete, clear) --}}
+@if(session('success'))
+    <div class="alert alert-success">
+        {{ session('success') }}
+    </div>
+@endif
+
 </br>
 <table class="table table-bordered table-striped">
     {{-- Table header --}}
@@ -74,7 +81,7 @@
     {{-- Fire house --}}
     <div class="mb-3">
         <label class="form-label">Fire house</label>
-        <select name="grade_id" class="form-select" required>
+        <select name="fire_station_id" class="form-select" required>
             @foreach(\App\Models\FireStation::all() as $station)
                 <option value="{{ $station->id }}">{{ $station->name }}</option>
             @endforeach
