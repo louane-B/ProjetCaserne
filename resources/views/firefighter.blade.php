@@ -55,9 +55,9 @@
         <input type="text" name="nom" class="form-control" required>
     </div>
 
-    {{-- Firefighter --}}
+    {{-- Firstname --}}
     <div class="mb-3">
-        <label class="form-label">Firefighter</label>
+        <label class="form-label">Firstname</label>
         <input type="text" name="prenom" class="form-control" required>
     </div>
 
