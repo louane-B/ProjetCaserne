@@ -46,12 +46,16 @@ class InterventionController extends Controller
 
     public function formModifyIntervention($id)
     {
-        $intervention = Intervention::with(['type', 'caserne'])->findOrFail($id);
+        $intervention = Intervention::with(['type', 'caserne', 'captain'])->findOrFail($id);
 
         // To display a drop-down list of types
         $types = TypeIntervention::all();
 
-        return view('interventionModify', compact('intervention', 'types'));
+        $captains = Firefighter::where('grade_id', 3)
+                            ->where('fire_station_id', $intervention->fire_station_id)
+                            ->get();
+
+        return view('interventionModify', compact('intervention', 'types', 'captains'));
     }
 
 
@@ -68,7 +72,9 @@ class InterventionController extends Controller
             'DateTempsDebut' => 'required',
             'Adresse' => 'required',
             'Resume' => 'required',
-            'IdTypeIntervention' => 'required|exists:interventions,id',
+            'type_intervention_id' => 'required|exists:type_interventions,id',
+            'fire_station_id' => 'required|exists:fire_stations,id',
+            'captain_id' => 'required|exists:firefighters,id',
         ]);
 
         // Retrieve the Intervation
@@ -79,11 +85,13 @@ class InterventionController extends Controller
             'DateTempsDebut' => $request->DateTempsDebut,
             'Adresse' => $request->Adresse,
             'Resume' => $request->Resume,
-            'IdTypeIntervention' => $request->IdTypeIntervention,
+            'type_intervention_id' => $request->type_intervention_id,
+            'fire_station_id' => $request->fire_station_id,
+            'captain_id' => $request->captain_id,
         ]);
 
         // Redirect with success message
-        return redirect()->route('Intervention.index', $intervention->IdCaserne)->with('success', 'Intervention updated successfully.');
+        return redirect()->route('Intervention.index', $intervention->fire_station_id)->with('success', 'Intervention updated successfully.');
     }
 
     /*
