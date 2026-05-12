@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\FireStation;
 use App\Models\Intervention;
 use App\Models\TypeIntervention;
+use App\Models\Firefighter;
 use Illuminate\Http\Request;
 
 class InterventionController extends Controller
@@ -103,7 +104,7 @@ class InterventionController extends Controller
         $intervention = Intervention::findOrFail($id);
         $intervention->delete();
 
-        return redirect()->route('Intervention.index', $intervention->IdCaserne)->with('success', 'Intervention successfully deleted');
+        return redirect()->route('Intervention.index', $intervention->fire_station_id)->with('success', 'Intervention successfully deleted');
     }
 
     /*
