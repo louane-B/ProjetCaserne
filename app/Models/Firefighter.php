@@ -58,4 +58,16 @@ class Firefighter extends Model
     {
         return $this->belongsTo(FireStation::class, 'fire_station_id');
     }
+
+    /*
+    |--------------------------------------------------------------------------
+    | Relationships
+    |--------------------------------------------------------------------------
+    | A Firefighter can be associated with multiple Intervention .
+    | This defines a one-to-many relationship.
+    */
+    public function interventionsAsCaptain()
+    {
+        return $this->hasMany(Intervention::class, 'captain_id');
+    }
 }
