@@ -57,7 +57,7 @@ class FirefighterController extends Controller
     | Display the edit form for a firefighter
     |--------------------------------------------------------------------------
     */
-    public function formModifyFireStation($id)
+    public function formModifyFirefighter($id)
     {
         // Retrieve the firefighter or fail if not found
         $fire = Firefighter::findOrFail($id);
