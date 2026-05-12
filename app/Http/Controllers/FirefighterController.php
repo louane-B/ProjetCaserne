@@ -117,5 +117,17 @@ class FirefighterController extends Controller
         return redirect('/firefighters')->with('success', 'Firefighter successfully deleted');
     }
 
+    /*
+    |--------------------------------------------------------------------------
+    | Delete ALL firefighter (clear the table)
+    |--------------------------------------------------------------------------
+    */
+    public function clear()
+    {
+        // Remove all fire station records
+        Firefighter::truncate();
+
+        return redirect('/firefighters')->with('success', 'All firefighter have been deleted');
+    }
 
 }
