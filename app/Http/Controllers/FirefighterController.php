@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\FireStation;
+use App\Models\Grade;
 use App\Models\Firefighter;
 use Illuminate\Http\Request;
 
@@ -66,7 +68,7 @@ class FirefighterController extends Controller
         // Load all fireStation for the dropdown
         $station = FireStation::all();
 
-        return view('firefighterModify', compact('grade', 'station'));
+        return view('firefighterModify', compact('fire', 'grade', 'station'));
     }
 
     /*
@@ -98,7 +100,7 @@ class FirefighterController extends Controller
         ]);
 
         // Redirect with success message
-        return redirect('/firefighter')->with('success', 'Firefighter successfully updated');
+        return redirect('/firefighters')->with('success', 'Firefighter successfully updated');
     }
 
 

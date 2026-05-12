@@ -23,6 +23,7 @@
             <th>Firstname</th>
             <th>Rank</th>
             <th>Fire house</th>
+            <th style="width: 200px;">Actions</th>
         </tr>
     </thead>
 
@@ -35,6 +36,12 @@
                 <td>{{ $fire->prenom }}</td>
                 <td>{!! $fire->grade->symbol !!} {{ $fire->grade->description ?? 'no rank' }}</td>
                 <td>{{ $fire->station->name ?? 'No fire stations' }}</td>
+                <td>
+                    {{-- Edit button --}}
+                    <a href="{{ route('firefighter.edit', $fire->id) }}" class="btn btn-warning btn_sm">
+                        Modifier
+                    </a>
+                </td>
             </tr>
         @endforeach
     </tbody>

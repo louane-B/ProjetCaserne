@@ -32,11 +32,11 @@
     {{-- Firefighter rank (dropdown list)--}}
     <div class="mb-3">
         <label class="form-label">Rank</label>
-        <select name="grade" class="form-select" required>
-            @foreach($fires as $fire)
-                <option value="{{ $grade->id }}"
-                    @if($fire->grade_id == $grade->id) selected @endif>
-                    {! $grade->symbol !}{{ $grade->description }}
+        <select name="grade_id" class="form-select" required>
+            @foreach($grade as $g)
+                <option value="{{ $g->id }}"
+                    @if($fire->grade_id == $g->id) selected @endif>
+                    {!! $g->symbol !!}{{ $g->description }}
                 </option>
             @endforeach
         </select>
@@ -46,10 +46,10 @@
     <div class="mb-3">
         <label class="form-label">Fire house</label>
         <select name="fire_station_id" class="form-select" required>
-            @foreach($stations as $station)
-                <option value="{{ $station->id }}"
-                    @if($station->fire_station_id == $station->id) selected @endif>
-                    {{ $station->name }}
+            @foreach($station as $s)
+                <option value="{{ $s->id }}"
+                    @if($fire->fire_station_id == $s->id) selected @endif>
+                    {{ $s->name }}
                 </option>
             @endforeach
         </select>
@@ -59,7 +59,7 @@
     <button type="submit" class="btn btn-primary w-100">Update Firefighter</button>
 
     {{-- Back button --}}
-    <a href="/FireStations" class="btn btn-secondary w-100 mt-2">Back</a>
+    <a href="/firefighters" class="btn btn-secondary w-100 mt-2">Back</a>
 </form>
 
 @endsection
