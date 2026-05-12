@@ -73,7 +73,7 @@ class FirefighterController extends Controller
 
     /*
     |--------------------------------------------------------------------------
-    | Update an existing fire station
+    | Update an existing firefighter
     |--------------------------------------------------------------------------
     */
     public function update($id, Request $request)
@@ -101,6 +101,20 @@ class FirefighterController extends Controller
 
         // Redirect with success message
         return redirect('/firefighters')->with('success', 'Firefighter successfully updated');
+    }
+
+    /*
+    |--------------------------------------------------------------------------
+    | Delete a specific firefighter
+    |--------------------------------------------------------------------------
+    */
+    public function delete($id)
+    {
+        // Retrieve and delete the fire station
+        $fire = Firefighter::findOrFail($id);
+        $fire->delete();
+
+        return redirect('/Firefighters')->with('success', 'Firefighter successfully deleted');
     }
 
 
