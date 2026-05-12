@@ -114,7 +114,7 @@ class FirefighterController extends Controller
         $fire = Firefighter::findOrFail($id);
         $fire->delete();
 
-        return redirect('/Firefighters')->with('success', 'Firefighter successfully deleted');
+        return redirect('/firefighters')->with('success', 'Firefighter successfully deleted');
     }
 
 
