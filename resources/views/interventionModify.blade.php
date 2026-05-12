@@ -28,19 +28,32 @@
 
         <div class="mb-3">
             <label class="form-label">Type of Intervention</label>
-            <select name="IdTypeIntervention" class="form-select">
+            <select name="type_intervention_id" class="form-select">
                 @foreach($types as $type)
                     <option value="{{ $type->id }}"
-                        @if($type->id == $intervention->IdTypeIntervention) selected @endif>
+                        @if($type->id == $intervention->type_intervention_id) selected @endif>
                         {{ $type->description }}
                     </option>
                 @endforeach
             </select>
         </div>
+
+        <div class="mb-3">
+            <label class="form-label">Captain in charge</label>
+            <select name="captain_id" class="form-select">
+                @foreach($captains as $cap)
+                    <option value="{{ $cap->id }}"
+                        @if($cap->id == $intervention->captain_id) selected @endif>
+                        {{ $cap->nom }} {{ $cap->prenom }}
+                    </option>
+                @endforeach
+            </select>
+        </div>
+
         {{-- Submit button --}}
         <button type="submit" class="btn btn-primary w-100 mt-2">Save changes</button>
 
-        <a href="{{ route('Intervention.index', $intervention->IdCaserne) }}" class="btn btn-secondary w-100 mt-2">
+        <a href="{{ route('Intervention.index', $intervention->fire_station_id) }}" class="btn btn-secondary w-100 mt-2">
             Cancel
         </a>
     </form>

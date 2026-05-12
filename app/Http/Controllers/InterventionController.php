@@ -73,7 +73,6 @@ class InterventionController extends Controller
             'Adresse' => 'required',
             'Resume' => 'required',
             'type_intervention_id' => 'required|exists:type_interventions,id',
-            'fire_station_id' => 'required|exists:fire_stations,id',
             'captain_id' => 'required|exists:firefighters,id',
         ]);
 
@@ -86,7 +85,6 @@ class InterventionController extends Controller
             'Adresse' => $request->Adresse,
             'Resume' => $request->Resume,
             'type_intervention_id' => $request->type_intervention_id,
-            'fire_station_id' => $request->fire_station_id,
             'captain_id' => $request->captain_id,
         ]);
 
