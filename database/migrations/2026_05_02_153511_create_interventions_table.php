@@ -22,7 +22,7 @@ return new class extends Migration
 
             $table->foreignId('fire_station_id')->constrained('fire_stations')->onDelete('cascade');
 
-            $table->foreignId('firefighter_id')->constrained('firefighters')->onDelete('cascade');
+            $table->foreignId('captain_id')->constrained('firefighters')->onDelete('cascade');
 
             $table->timestamps();
         });
