@@ -51,4 +51,55 @@ class FirefighterController extends Controller
         //Redirect with success message
         return redirect('/firefighters')->with('success', 'firefighter successfully added');
     }
+
+    /*
+    |--------------------------------------------------------------------------
+    | Display the edit form for a firefighter
+    |--------------------------------------------------------------------------
+    */
+    public function formModifyFireStation($id)
+    {
+        // Retrieve the firefighter or fail if not found
+        $fire = Firefighter::findOrFail($id);
+        // Load all grades for the dropdown
+        $grade = Grade::all();
+        // Load all fireStation for the dropdown
+        $station = FireStation::all();
+
+        return view('firefighterModify', compact('grade', 'station'));
+    }
+
+    /*
+    |--------------------------------------------------------------------------
+    | Update an existing fire station
+    |--------------------------------------------------------------------------
+    */
+    public function update($id, Request $request)
+    {
+        // Validate form inputs
+        $request->validate([
+            'matricule' => 'required',
+            'grade_id' => 'required|exists:grades,id',
+            'nom' => 'required',
+            'prenom' => 'required',
+            'fire_station_id' => 'required|exists:fire_stations,id',
+        ]);
+
+        // Retrieve the firefighter
+        $fire = Firefighter::findOrFail($id);
+
+        // Update the firefighter
+        $fire->update([
+            'matricule' => $request->matricule,
+            'grade_id' => $request->grade_id,
+            'nom' => $request->nom,
+            'prenom' => $request->prenom,
+            'fire_station_id' => $request->fire_station_id,
+        ]);
+
+        // Redirect with success message
+        return redirect('/firefighter')->with('success', 'Firefighter successfully updated');
+    }
+
+
 }
