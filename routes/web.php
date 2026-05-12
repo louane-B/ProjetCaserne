@@ -124,3 +124,7 @@ Route::post('/firefighters/add', [FirefighterController::class, 'add'])->name('f
 Route::get('/firefighters/{id}/edit', [FirefighterController::class, 'formModifyFirefighter'])->name('firefighter.edit');
 /* Update a specific firefighter */
 Route::put('/firefighters/{id}/update', [FirefighterController::class, 'update'])->name('firefighter.update');
+
+/* Delete a specific fire station */
+Route::delete('/firefighters/{id}/delete', [FirefighterController::class, 'delete'])->name('firefighter.delete');
+
