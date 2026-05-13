@@ -6,6 +6,26 @@
 <h2 class="mb-4">list of grade</h2>
 </br>
 
+{{-- Success message displayed after an action (add, update, delete, clear) --}}
+@if(session('success'))
+    <div class="alert alert-success">
+        {{ session('success') }}
+    </div>
+@endif
+
+{{-- Button to clear (delete all) grade --}}
+<form action="{{ route('grade.clear') }}"
+        method="POST"
+        onsubmit="return confirm('Do you really want to delete ALL Grades ?');"
+        class="mb-3">
+    @csrf
+    @method('DELETE')
+
+    <button type="submit" class="btn btn-danger">
+        Clear all
+    </button>
+</form>
+
 </br>
 
 {{-- Table displaying all  grade --}}
