@@ -22,4 +22,33 @@ class FirefighterController extends Controller
         return view('firefighter', compact('firefighters'));
     }
 
+     /*
+    |--------------------------------------------------------------------------
+    | Add a new Firefighter
+    |--------------------------------------------------------------------------
+    | Validates the form, creates a new record, then redirects with a success message.
+    */
+    public function add(Request $request)
+    {
+        //validate form inputs
+        $request->validate([
+            'matricule' => 'required',
+            'grade_id' => 'required|exists:grades,id',
+            'nom' => 'required',
+            'prenom' => 'required',
+            'fire_station_id' => 'required|exists:fire_stations,id',
+        ]);
+
+        //Create the new Type Intervention
+        Firefighter::create([
+            'matricule'=>$request->matricule,
+            'grade_id'=>$request->grade_id,
+            'nom'=>$request->nom,
+            'prenom'=>$request->prenom,
+            'fire_station_id'=>$request->fire_station_id,
+        ]);
+
+        //Redirect with success message
+        return redirect('/firefighters')->with('success', 'firefighter successfully added');
+    }
 }

@@ -6,6 +6,13 @@
 <h1 class="mb-4">List of Type Interventions</h1>
 </br>
 
+{{-- Success message displayed after an action (add, update, delete, clear) --}}
+@if(session('success'))
+    <div class="alert alert-success">
+        {{ session('success') }}
+    </div>
+@endif
+
 </br>
 <table class="table table-bordered table-striped">
     {{-- Table header --}}
@@ -32,4 +39,57 @@
         @endforeach
     </tbody>
 </table>
+
+</br>
+<hr class="my-4">
+
+{{-- Section title for adding a new firefighter --}}
+<h2 class="mb-4 text-center">Add a New Firefighter</h2>
+
+{{-- Form to add a new fire station --}}
+<form action="{{ route('firefighter.add') }}" method="POST" class="border p-4 rounded bg-light">
+    @csrf
+
+    {{-- badge number --}}
+    <div class="mb-3">
+        <label class="form-label">badge number</label>
+        <input type="text" name="matricule" class="form-control" required>
+    </div>
+
+    {{-- Lastname --}}
+    <div class="mb-3">
+        <label class="form-label">Lastname</label>
+        <input type="text" name="nom" class="form-control" required>
+    </div>
+
+    {{-- Firstname --}}
+    <div class="mb-3">
+        <label class="form-label">Firstname</label>
+        <input type="text" name="prenom" class="form-control" required>
+    </div>
+
+    {{-- rank --}}
+    <div class="mb-3">
+        <label class="form-label">Rank</label>
+        <select name="grade_id" class="form-select" required>
+            @foreach(\App\Models\Grade::all() as $grade)
+                <option value="{{ $grade->id }}">{!! $grade->symbol !!}{{ $grade->description }}</option>
+            @endforeach
+        </select>
+    </div>
+
+    {{-- Fire house --}}
+    <div class="mb-3">
+        <label class="form-label">Fire house</label>
+        <select name="fire_station_id" class="form-select" required>
+            @foreach(\App\Models\FireStation::all() as $station)
+                <option value="{{ $station->id }}">{{ $station->name }}</option>
+            @endforeach
+        </select>
+    </div>
+
+    {{-- Submit button --}}
+    <button type="submit" class="btn btn-primary w-100">Add Firefighter</button>
+</form>
+
 @endsection
