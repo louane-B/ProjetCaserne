@@ -98,3 +98,6 @@ Route::get('/grades', [GradeController::class, 'index'])->name('grade.index');
 
 /* Add a new Grade */
 Route::post('/grades/add', [GradeController::class, 'add'])->name('grade.add');
+
+/* Delete a specific grade */
+Route::delete('/gradess/{id}/delete', [GradeController::class, 'delete'])->name('grade.delete');
