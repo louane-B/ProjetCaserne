@@ -119,3 +119,8 @@ Route::get('/firefighters', [FirefighterController::class, 'index'])->name('fire
 
 /* Add a new Firefighter */
 Route::post('/firefighters/add', [FirefighterController::class, 'add'])->name('firefighter.add');
+
+/* Display the edit form for a specific firefighter */
+Route::get('/firefighters/{id}/edit', [FirefighterController::class, 'formModifyFirefighter'])->name('firefighter.edit');
+/* Update a specific firefighter */
+Route::put('/firefighters/{id}/update', [FirefighterController::class, 'update'])->name('firefighter.update');
