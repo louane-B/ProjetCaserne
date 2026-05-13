@@ -4,6 +4,7 @@ namespace App\Models;
 
 use App\Models\State;
 use App\Models\Intervention;
+use App\Models\Firefighter;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -56,6 +57,18 @@ class FireStation extends Model
     */
     public function interventions()
     {
-        return $this->hasMany(Intervention::class, 'IdCaserne');
+        return $this->hasMany(Intervention::class, 'fire_station_id');
+    }
+
+    /*
+    |--------------------------------------------------------------------------
+    | Relationships
+    |--------------------------------------------------------------------------
+    | A fire station can be associated with multiple firefighter.
+    | This defines a one-to-many relationship.
+    */
+    public function firefighter()
+    {
+        return $this->hasMany(Firefighter::class, 'fire_station_id');
     }
 }

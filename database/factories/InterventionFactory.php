@@ -26,8 +26,8 @@ class InterventionFactory extends Factory
             'DateTempsDebut' => $this->faker->dateTimeBetween('-1 year', 'now'),
             'Adresse' => $this->faker->address,
             'Resume' => $this->faker->sentence(12),
-            'IdTypeIntervention' => TypeIntervention::inRandomOrder()->first()->id,
-            'IdCaserne' => FireStation::inRandomOrder()->first()->id,
+            'type_intervention_id' => TypeIntervention::inRandomOrder()->first()->id,
+            'fire_station_id' => FireStation::inRandomOrder()->first()->id,
         ];
     }
 }

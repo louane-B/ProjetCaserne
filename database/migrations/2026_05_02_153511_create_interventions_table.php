@@ -17,12 +17,10 @@ return new class extends Migration
             $table->string('Adresse');
             $table->text('Resume')->nullable();
 
-            // Foreign keys
-            $table->unsignedBigInteger('IdTypeIntervention');
-            $table->unsignedBigInteger('IdCaserne');
+            // foreign key
+            $table->foreignId('type_intervention_id')->constrained('type_interventions')->onDelete('cascade');
 
-            $table->foreign('IdTypeIntervention')->references('id')->on('type_interventions')->onDelete('cascade');
-            $table->foreign('IdCaserne')->references('id')->on('fire_stations')->onDelete('cascade');
+            $table->foreignId('fire_station_id')->constrained('fire_stations')->onDelete('cascade');
 
             $table->timestamps();
         });

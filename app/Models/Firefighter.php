@@ -2,60 +2,59 @@
 
 namespace App\Models;
 
-use App\Models\TypeIntervention;
+use App\Models\Grade;
 use App\Models\FireStation;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Intervention extends Model
+class Firefighter extends Model
 {
-     /*
+    /*
     |--------------------------------------------------------------------------
     | Model Configuration
     |--------------------------------------------------------------------------
-    | This model represents the "interventions" table.
+    | This model represents the "firefighters" table.
     | It does not use timestamps and allows mass assignment
     | for the fields listed in $fillable.
     */
 
     use HasFactory;
 
-    // Disable created_at and updated_at timestamps
+     // Disable created_at and updated_at timestamps
     public $timestamps = false;
 
     // Explicit table name (optional but clear)
-    protected $table = 'interventions';
+    protected $table = 'firefighters';
 
     // Fields that can be mass-assigned
     protected $fillable = [
-        'DateTempsDebut',
-        'Adresse',
-        'Resume',
-        'type_intervention_id',
+        'matricule',
+        'grade_id',
+        'nom',
+        'prenom',
         'fire_station_id',
     ];
-
-
+    
     /*
     |--------------------------------------------------------------------------
     | Relationships
     |--------------------------------------------------------------------------
-    | A intervention belongs to a single type intervention.
+    | A fire station belongs to a single grade.
     | This defines a many-to-one relationship.
     */
-    public function type()
+    public function grade()
     {
-        return $this->belongsTo(TypeIntervention::class, 'type_intervention_id');
+        return $this->belongsTo(Grade::class);
     }
 
     /*
     |--------------------------------------------------------------------------
     | Relationships
     |--------------------------------------------------------------------------
-    | A intervention belongs to a single fire station.
+    | A fire station belongs to a single station.
     | This defines a many-to-one relationship.
     */
-    public function caserne()
+    public function station()
     {
         return $this->belongsTo(FireStation::class, 'fire_station_id');
     }

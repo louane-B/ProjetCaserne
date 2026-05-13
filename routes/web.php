@@ -5,6 +5,7 @@ use App\Http\Controllers\FireStationController;
 use App\Http\Controllers\TypeInterventionController;
 use App\Http\Controllers\InterventionController;
 use App\Http\Controllers\GradeController;
+use App\Http\Controllers\FirefighterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -105,3 +106,13 @@ Route::delete('/gradess/{id}/delete', [GradeController::class, 'delete'])->name(
 /* Delete ALL fire stations (clear the table) */
 Route::delete('/grades/clear', [GradeController::class, 'clear'])->name('grade.clear');
 
+/*
+|--------------------------------------------------------------------------
+| Web Routes
+|--------------------------------------------------------------------------
+| These routes handle all firefighter CRUD operations.
+| Each route points to a specific controller method.
+*/
+
+/* Display list of firefighter */
+Route::get('/firefighters', [FirefighterController::class, 'index'])->name('firefighter.index');

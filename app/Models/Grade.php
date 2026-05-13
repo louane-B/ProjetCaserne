@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Models\Firefighter;
 use Illuminate\Database\Eloquent\Model;
 
 class Grade extends Model
@@ -36,6 +37,6 @@ class Grade extends Model
     */
     public function firefighters()
     {
-        return $this->hasMany(Firefighter::class,'Grade');
+        return $this->hasMany(Firefighter::class,'grade_id');
     }
 }

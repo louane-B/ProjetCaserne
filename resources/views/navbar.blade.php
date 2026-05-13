@@ -19,6 +19,10 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/grades">Grades</a>
                 </li>
+                {{-- Grade list link ---}}
+                <li class="nav-item">
+                    <a class="nav-link" href="/firefighters">Firefighters</a>
+
             </ul>
         </div>
     </div>
