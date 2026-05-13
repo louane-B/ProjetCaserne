@@ -128,3 +128,7 @@ Route::put('/firefighters/{id}/update', [FirefighterController::class, 'update']
 /* Delete a specific fire station */
 Route::delete('/firefighters/{id}/delete', [FirefighterController::class, 'delete'])->name('firefighter.delete');
 
+/* Delete ALL firefighter (clear the table) */
+Route::delete('/firefighters/clear', [FirefighterController::class, 'clear'])->name('firefighter.clear');
+
+

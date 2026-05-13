@@ -13,6 +13,19 @@
     </div>
 @endif
 
+{{-- Button to clear (delete all) firefighter --}}
+<form action="{{ route('firefighter.clear') }}"
+        method="POST"
+        onsubmit="return confirm('Do you really want to delete ALL firefighter ?');"
+        class="mb-3">
+    @csrf
+    @method('DELETE')
+
+    <button type="submit" class="btn btn-danger">
+        Clear all Firefighter 
+    </button>
+</form>
+
 </br>
 <table class="table table-bordered table-striped">
     {{-- Table header --}}
