@@ -13,6 +13,7 @@
         <p><strong>Summary</strong> {{ $intervention->Resume }}</p>
         <p><strong>Type</strong> {{ $intervention->type->description }}</p>
         <p><strong>Fire Station</strong> {{ $intervention->caserne->name }}</p>
+        <p><strong>Captain firefighter</strong> {{ $intervention->captain->nom }} {{ $intervention->captain->prenom }}</p>
 
     </div>
 

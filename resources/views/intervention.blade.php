@@ -60,5 +60,8 @@
         @endforeach
     </tbody>
 </table>
+<div class="container">
+    <a href="{{ route('firestations.index') }}" class="btn btn-secondary mt-3">Back</a>
+</div>
 
 @endsection

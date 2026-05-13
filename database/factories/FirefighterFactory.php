@@ -25,8 +25,8 @@ class FirefighterFactory extends Factory
             'prenom' => $this->faker->firstName(),
 
             // Relations
-            'grade_id' => Grade::inRandomOrder()->first()->id ?? Grade::factory(),
-            'fire_station_id' => FireStation::inRandomOrder()->first()->id ?? FireStation::factory(),
+            'grade_id' => Grade::inRandomOrder()->first()->id,
+            'fire_station_id' => FireStation::inRandomOrder()->first()->id,
         ];
     }
 }

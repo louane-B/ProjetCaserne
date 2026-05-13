@@ -33,6 +33,7 @@ class Intervention extends Model
         'Resume',
         'type_intervention_id',
         'fire_station_id',
+        'captain_id'
     ];
 
 
@@ -46,6 +47,18 @@ class Intervention extends Model
     public function type()
     {
         return $this->belongsTo(TypeIntervention::class, 'type_intervention_id');
+    }
+
+    /*
+    |--------------------------------------------------------------------------
+    | Relationships
+    |--------------------------------------------------------------------------
+    | A intervention belongs to a single type intervention.
+    | This defines a many-to-one relationship.
+    */
+    public function captain()
+    {
+        return $this->belongsTo(Firefighter::class, 'captain_id');
     }
 
     /*
