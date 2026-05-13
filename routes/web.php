@@ -95,3 +95,6 @@ Route::delete('/Intervention/clear', [InterventionController::class, 'clear'])->
 
 /* Display list of Grade */
 Route::get('/grades', [GradeController::class, 'index'])->name('grade.index');
+
+/* Add a new Grade */
+Route::post('/grades/add', [GradeController::class, 'add'])->name('grade.add');
