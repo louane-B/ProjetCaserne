@@ -11,8 +11,13 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/FireStations">Fire Stations</a>
                 </li>
+                {{-- Type Interventions list link ---}}
                 <li class="nav-item">
                     <a class="nav-link" href="/TypeInterventions">Type Interventions</a>
+                </li>
+                {{-- Grade list link ---}}
+                <li class="nav-item">
+                    <a class="nav-link" href="/grades">Grades</a>
                 </li>
             </ul>
         </div>
