@@ -6,6 +6,7 @@ use App\Http\Controllers\TypeInterventionController;
 use App\Http\Controllers\InterventionController;
 use App\Http\Controllers\GradeController;
 use App\Http\Controllers\FirefighterController;
+use App\Http\Controllers\TypeVehicleController;
 
 /*
 |--------------------------------------------------------------------------
@@ -131,4 +132,13 @@ Route::delete('/firefighters/{id}/delete', [FirefighterController::class, 'delet
 /* Delete ALL firefighter (clear the table) */
 Route::delete('/firefighters/clear', [FirefighterController::class, 'clear'])->name('firefighter.clear');
 
+/*
+|--------------------------------------------------------------------------
+| Web Routes
+|--------------------------------------------------------------------------
+| These routes handle all Type Vehicle CRUD operations.
+| Each route points to a specific controller method.
+*/
 
+/* Display list of type vehicles */
+Route::get('/typeVehicles', [TypeVehicleController::class, 'index'])->name('typeVehicle.index');
