@@ -19,7 +19,7 @@
     </thread>
 
     <tbody>
-        @foreach($vehicles as $vehicle)
+        @foreach($typeVehicles as $vehicle)
         <tr>
             <td>{{ $vehicle->code }}</td>
             <td>{{ $vehicle->description }}</td>
