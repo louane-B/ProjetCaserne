@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\TypeVehicle;
 use Illuminate\Http\Request;
 
 class TypeVehicleController extends Controller
