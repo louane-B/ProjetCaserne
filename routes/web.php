@@ -147,7 +147,11 @@ Route::get('/typeVehicles', [TypeVehicleController::class, 'index'])->name('type
 Route::post('/typeVehicles/add', [TypeVehicleController::class, 'add'])->name('typeVehicle.add');
 
 /* Display the edit form for a specific  type vehicle */
-Route::get('/TypeVehicle/{id}/edit', [TypeVehicleController::class, 'formModifyTypeVehicle'])->name('typeVehicle.edit');
+Route::get('/TypeVehicles/{id}/edit', [TypeVehicleController::class, 'formModifyTypeVehicle'])->name('typeVehicle.edit');
 
 /* Update a specific  type vehicle */
-Route::put('/Intervention/{id}/update', [TypeVehicleController::class, 'update'])->name('typeVehicle.update');
+Route::put('/typeVehicles/{id}/update', [TypeVehicleController::class, 'update'])->name('typeVehicle.update');
+
+/* Delete a specific type vehicle */
+Route::delete('/typeVehicles/{id}/delete', [TypeVehicleController::class, 'delete'])->name('typeVehicle.delete');
+

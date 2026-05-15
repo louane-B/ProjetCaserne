@@ -85,4 +85,19 @@ class TypeVehicleController extends Controller
         return redirect('/typeVehicles')->with('success', 'Type Intervention successfully updated');
     }
 
+     /*
+    |--------------------------------------------------------------------------
+    | Delete a specific Type Vehicle
+    |--------------------------------------------------------------------------
+    */
+    public function delete($id)
+    {
+        // Retrieve and delete the type intervention
+        $vehicle = TypeVehicle::findOrFail($id);
+        $vehicle->delete();
+
+        return redirect('/typeVehicles')->with('success', 'Type Intervention successfully deleted');
+    }
+
+
 }
