@@ -24,6 +24,7 @@
             <th>Modele</th>
             <th>type de vehicle</th>
             <th>fire station</th>
+            <th style="width: 200px;">Actions</th>
         </tr>
     </thead>
     <tbody>
@@ -36,6 +37,12 @@
             <td>{{ $vehicle->Modele }}</td>
             <td>{{ $vehicle->type->code }}</td>
             <td>{{ $vehicle->caserne->name }}</td>
+            <td>
+                    {{-- Edit button --}}
+                    <a href="{{ route('Vehicle.edit', $vehicle->id) }}" class="btn btn-warning btn_sm">
+                        Modifier
+                    </a>
+            </td>
         </tr>
         @endforeach
     </tbody>

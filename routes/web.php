@@ -172,3 +172,9 @@ Route::get('/vehicles', [VehicleController::class, 'index'])->name('Vehicle.inde
 
 /* Add a new Vehicle */
 Route::post('/vehicles/add', [VehicleController::class, 'add'])->name('Vehicle.add');
+
+/* Display the edit form for a specific  vehicle */
+Route::get('/vehicles/{id}/edit', [VehicleController::class, 'formModifyVehicle'])->name('Vehicle.edit');
+
+/* Update a specific vehicle */
+Route::put('/vehicles/{id}/update', [VehicleController::class, 'update'])->name('Vehicle.update');

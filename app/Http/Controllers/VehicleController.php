@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Vehicle;
+use App\Models\TypeVehicle;
+use App\Models\FireStation;
 use Illuminate\Http\Request;
 
 class VehicleController extends Controller
@@ -56,4 +58,60 @@ class VehicleController extends Controller
         // Redirect with success message
         return redirect('/vehicles')->with('success', 'Vehicle successfully added');
     }
+
+     /*
+    |--------------------------------------------------------------------------
+    | Display the edit form for type vehicle
+    |--------------------------------------------------------------------------
+    */
+    public function formModifyVehicle($id)
+    {
+        // Retrieve the fire station or fail if not found
+        $vehicle = Vehicle::findOrFail($id);
+
+        // Charger les types de véhicules
+        $types = TypeVehicle::all();
+
+        // Charger les casernes
+        $casernes = FireStation::all();
+
+        return view('VehicleModify', compact('vehicle', 'types', 'casernes'));
+    }
+
+     /*
+    |--------------------------------------------------------------------------
+    | Update an existing type vehicle
+    |--------------------------------------------------------------------------
+    */
+    public function update($id, Request $request)
+    {
+        // Validate form inputs
+        $request->validate([
+            'NoIdentification' => 'required',
+            'Immatriculation' => 'required',
+            'AnneeMiseEnService' => 'required',
+            'Marque' => 'required',
+            'Modele' => 'required',
+            'type_vehicle_id' => 'required|exists:type_vehicles,id',
+            'fire_station_id' => 'required|exists:fire_stations,id',
+        ]);
+
+        // Retrieve the type vehicle
+        $vehicle = Vehicle::findOrFail($id);
+
+        // Update the type Intervention
+        $vehicle->update([
+            'NoIdentification' => $request->NoIdentification,
+            'Immatriculation' => $request->Immatriculation,
+            'AnneeMiseEnService' => $request->AnneeMiseEnService,
+            'Marque' => $request->Marque,
+            'Modele' => $request->Modele,
+            'type_vehicle_id' => $request->type_vehicle_id,
+            'fire_station_id' => $request->fire_station_id,
+        ]);
+
+        // Redirect with success message
+        return redirect('/vehicles')->with('success', 'Vehicle successfully updated');
+    }
+
 }
