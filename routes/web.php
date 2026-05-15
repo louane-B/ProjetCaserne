@@ -169,3 +169,6 @@ Route::delete('/typevehicles/clear', [TypeVehicleController::class, 'clear'])->n
 
 /* Display list of type vehicles */
 Route::get('/vehicles', [VehicleController::class, 'index'])->name('Vehicle.index');
+
+/* Add a new Vehicle */
+Route::post('/vehicles/add', [VehicleController::class, 'add'])->name('Vehicle.add');
