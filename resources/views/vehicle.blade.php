@@ -42,6 +42,18 @@
                     <a href="{{ route('Vehicle.edit', $vehicle->id) }}" class="btn btn-warning btn_sm">
                         Modifier
                     </a>
+
+                    {{-- Delete button --}} 
+                    <form action="{{ route('Vehicle.delete', $vehicle->id) }}"
+                        method="POST"
+                        style="display:inline-block;"
+                        onsubmit="return confirm('Do you really want to delete this vehicle?');">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" class="btn btn-danger btn-sm">
+                            Delete
+                        </button>
+                    </form>
             </td>
         </tr>
         @endforeach
