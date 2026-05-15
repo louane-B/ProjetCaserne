@@ -27,6 +27,10 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/typeVehicles">TypeVehicle</a>
                 </li>
+                {{-- Vehicle list link ---}}
+                <li class="nav-item">
+                    <a class="nav-link" href="/vehicles">Vehicles</a>
+                </li>
             </ul>
         </div>
     </div>
