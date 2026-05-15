@@ -142,3 +142,6 @@ Route::delete('/firefighters/clear', [FirefighterController::class, 'clear'])->n
 
 /* Display list of type vehicles */
 Route::get('/typeVehicles', [TypeVehicleController::class, 'index'])->name('typeVehicle.index');
+
+/* Add a new TypeVehicle */
+Route::post('/typeVehicles/add', [TypeVehicleController::class, 'add'])->name('typeVehicle.add');
