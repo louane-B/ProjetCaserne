@@ -109,6 +109,6 @@ class TypeVehicleController extends Controller
         // Remove all type intervention records
         TypeVehicle::truncate();
 
-        return redirect('/TypeVehicles')->with('success', 'All type vehicle have been deleted');
+        return redirect('/typeVehicles')->with('success', 'All type vehicle have been deleted');
     }
 }
