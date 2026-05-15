@@ -11,6 +11,20 @@
         {{ session('success') }}
     </div>
 @endif
+
+{{-- Button to clear (delete all) type Vehicle --}}
+<form action="{{ route('Vehicle.clear') }}"
+        method="POST"
+        onsubmit="return confirm('Do you really want to delete ALL Vehicle ?');"
+        class="mb-3">
+        @csrf
+        @method('DELETE')
+
+    <button type="submit" class="btn btn-danger">
+        Clear List
+    </button>
+</form>
+
 </br>
 
 {{-- Table displaying all  vehicle --}}

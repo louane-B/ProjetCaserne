@@ -181,3 +181,6 @@ Route::put('/vehicles/{id}/update', [VehicleController::class, 'update'])->name(
 
 /* Delete a specific vehicle */
 Route::delete('/vehicles/{id}/delete', [VehicleController::class, 'delete'])->name('Vehicle.delete');
+
+/* Delete ALL  vehicle (clear the table) */
+Route::delete('/vehicles/clear', [VehicleController::class, 'clear'])->name('Vehicle.clear');
