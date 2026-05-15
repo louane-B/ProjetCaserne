@@ -157,3 +157,14 @@ Route::delete('/typeVehicles/{id}/delete', [TypeVehicleController::class, 'delet
 
 /* Delete ALL type vehicle (clear the table) */
 Route::delete('/typevehicles/clear', [TypeVehicleController::class, 'clear'])->name('typeVehicle.clear');
+
+/*
+|--------------------------------------------------------------------------
+| Web Routes
+|--------------------------------------------------------------------------
+| These routes handle all Vehicle CRUD operations.
+| Each route points to a specific controller method.
+*/
+
+/* Display list of type vehicles */
+Route::get('/vehicles', [VehicleController::class, 'index'])->name('Vehicle.index');
