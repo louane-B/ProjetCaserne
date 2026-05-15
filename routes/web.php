@@ -7,6 +7,7 @@ use App\Http\Controllers\InterventionController;
 use App\Http\Controllers\GradeController;
 use App\Http\Controllers\FirefighterController;
 use App\Http\Controllers\TypeVehicleController;
+use App\Http\Controllers\VehicleController;
 
 /*
 |--------------------------------------------------------------------------

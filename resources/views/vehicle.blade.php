@@ -28,8 +28,8 @@
             <td>{{ $vehicle->AnneeMiseEnService }}</td>
             <td>{{ $vehicle->Marque }}</td>
             <td>{{ $vehicle->Modele }}</td>
-            <td>{{ $vehicle->type_vehicle_id }}</td>
-            <td>{{ $vehicle->fire_station_id }}</td>
+            <td>{{ $vehicle->type->code }}</td>
+            <td>{{ $vehicle->caserne->name }}</td>
         </tr>
         @endforeach
     </tbody>
