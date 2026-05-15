@@ -5,6 +5,12 @@
 {{-- Main title of the page --}}
 <h2 class="mb-4">list of Vehicle</h2>
 </br>
+{{-- Success message displayed after an action (add, update, delete, clear) --}}
+@if(session('success'))
+    <div class="alert alert-success">
+        {{ session('success') }}
+    </div>
+@endif
 </br>
 
 {{-- Table displaying all  vehicle --}}
@@ -34,5 +40,64 @@
         @endforeach
     </tbody>
 </table>
+
+</br>
+<hr class="my-4">
+
+{{-- Section title for adding a new  Vehicle --}}
+<h2 class="mb-4 text-center">Add a New  Vehicle</h2>
+
+<form action="{{ route('Vehicle.add') }}" method="POST" class="border p-4 rounded bg-light">
+        @csrf
+
+        <div class="mb-3">
+            <label class="form-label">Numéro d'identification</label>
+            <input type="text" name="NoIdentification" class="form-control" required>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Immatriculation</label>
+            <input type="text" name="Immatriculation" class="form-control" required>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Année de mise en service</label>
+            <input type="number" name="AnneeMiseEnService" class="form-control" min="1950" max="{{ date('Y') }}" required>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Marque</label>
+            <input type="text" name="Marque" class="form-control" required>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Modèle</label>
+            <input type="text" name="Modele" class="form-control" required>
+        </div>
+        
+
+        <div class="mb-3">
+            <label class="form-label">Type de véhicule</label>
+            <select name="type_vehicle_id" class="form-select" required>
+                <option value="">-- Sélectionner --</option>
+                @foreach(\App\Models\typeVehicle::all() as $type)
+                    <option value="{{ $type->id }}">{{ $type->code }} - {{ $type->description }}</option>
+                @endforeach
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Caserne</label>
+            <select name="fire_station_id" class="form-select" required>
+                <option value="">-- Sélectionner --</option>
+                @foreach(\App\Models\FireStation::all() as $caserne)
+                    <option value="{{ $caserne->id }}">{{ $caserne->name }}</option>
+                @endforeach
+            </select>
+        </div>
+
+        <button type="submit" class="btn btn-primary mt-3">Add New typeVehicle</button>
+
+    </form>
 
 @endsection
