@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Vehicle;
+use App\Models\TypeVehicle;
+use App\Models\FireStation;
 use Illuminate\Http\Request;
 
 class VehicleController extends Controller
@@ -67,7 +69,13 @@ class VehicleController extends Controller
         // Retrieve the fire station or fail if not found
         $vehicle = Vehicle::findOrFail($id);
 
-        return view('VehicleModify', compact('vehicle'));
+        // Charger les types de véhicules
+        $types = TypeVehicle::all();
+
+        // Charger les casernes
+        $casernes = FireStation::all();
+
+        return view('VehicleModify', compact('vehicle', 'types', 'casernes'));
     }
 
      /*
@@ -103,7 +111,7 @@ class VehicleController extends Controller
         ]);
 
         // Redirect with success message
-        return redirect('/vehicles')->with('success', 'Type Intervention successfully updated');
+        return redirect('/vehicles')->with('success', 'Vehicle successfully updated');
     }
 
 }
