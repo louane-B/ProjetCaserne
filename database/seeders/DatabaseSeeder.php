@@ -23,6 +23,7 @@ class DatabaseSeeder extends Seeder
             FirefighterSeeder::class,
             InterventionSeeder::class,
             TypeVehicleSeeder::class,
+            VehicleSeeder::class,
         ]);
     }
 }
