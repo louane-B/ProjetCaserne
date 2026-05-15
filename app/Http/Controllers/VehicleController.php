@@ -19,6 +19,6 @@ class VehicleController extends Controller
         $Vehicles = Vehicle::with(['type', 'caserne'])->get();
         
         // Otherwise, show the TypeVehicle list page
-        return view('Vehicle', compact('Vehicles'));
+        return view('vehicle', compact('Vehicles'));
     }
 }
