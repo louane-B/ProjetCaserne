@@ -178,3 +178,6 @@ Route::get('/vehicles/{id}/edit', [VehicleController::class, 'formModifyVehicle'
 
 /* Update a specific vehicle */
 Route::put('/vehicles/{id}/update', [VehicleController::class, 'update'])->name('Vehicle.update');
+
+/* Delete a specific vehicle */
+Route::delete('/vehicles/{id}/delete', [VehicleController::class, 'delete'])->name('Vehicle.delete');
