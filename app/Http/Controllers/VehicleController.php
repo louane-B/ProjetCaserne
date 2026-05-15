@@ -114,4 +114,19 @@ class VehicleController extends Controller
         return redirect('/vehicles')->with('success', 'Vehicle successfully updated');
     }
 
+    /*
+    |--------------------------------------------------------------------------
+    | Delete a specific Vehicle
+    |--------------------------------------------------------------------------
+    */
+    public function delete($id)
+    {
+        // Retrieve and delete the type intervention
+        $vehicle = Vehicle::findOrFail($id);
+        $vehicle->delete();
+
+        return redirect('/vehicles')->with('success', ' Vehicle successfully deleted');
+    }
+
+
 }
