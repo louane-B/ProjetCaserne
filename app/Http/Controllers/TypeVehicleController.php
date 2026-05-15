@@ -96,8 +96,19 @@ class TypeVehicleController extends Controller
         $vehicle = TypeVehicle::findOrFail($id);
         $vehicle->delete();
 
-        return redirect('/typeVehicles')->with('success', 'Type Intervention successfully deleted');
+        return redirect('/typeVehicles')->with('success', 'Type Vehicle successfully deleted');
     }
 
+    /*
+    |--------------------------------------------------------------------------
+    | Delete ALL Type Vehicle (clear the table)
+    |--------------------------------------------------------------------------
+    */
+    public function clear()
+    {
+        // Remove all type intervention records
+        TypeVehicle::truncate();
 
+        return redirect('/TypeVehicles')->with('success', 'All type vehicle have been deleted');
+    }
 }

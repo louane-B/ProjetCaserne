@@ -13,6 +13,18 @@
     </div>
 @endif
 
+{{-- Button to clear (delete all) type Vehicle --}}
+<form action="{{ route('typeVehicle.clear') }}"
+        method="POST"
+        onsubmit="return confirm('Do you really want to delete ALL type Vehicle ?');"
+        class="mb-3">
+        @csrf
+        @method('DELETE')
+
+    <button type="submit" class="btn btn-danger">
+        Clear List
+    </button>
+</form>
 
 </br>
 
