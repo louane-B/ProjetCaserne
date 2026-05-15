@@ -13,12 +13,12 @@
 
         <div class="mb-3">
             <label class="form-label">Code</label>
-            <input type="datetime-local" name="code" class="form-control" value="{{ $vehicle->code }}" required>
+            <input type="string" name="code" class="form-control" value="{{ $vehicle->code }}" required>
         </div>
 
         <div class="mb-3">
             <label class="form-label">Description</label>
-            <input type="text" name="description" class="form-control" value="{{ $vehicle->description }}" required>
+            <input type="string" name="description" class="form-control" value="{{ $vehicle->description }}" required>
         </div>
 
         {{-- Submit button --}}

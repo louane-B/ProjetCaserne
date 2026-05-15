@@ -56,7 +56,7 @@ class TypeVehicleController extends Controller
         // Retrieve the fire station or fail if not found
         $vehicle = TypeVehicle::findOrFail($id);
 
-        return view('typeVehicletionModify', compact('vehicle'));
+        return view('typeVehicleModify', compact('vehicle'));
     }
 
      /*
@@ -72,6 +72,9 @@ class TypeVehicleController extends Controller
             'description' => 'required',
         ]);
 
+        // Retrieve the type vehicle
+        $vehicle = TypeVehicle::findOrFail($id);
+
         // Update the type Intervention
         $vehicle->update([
             'code' => $request->code,
@@ -79,7 +82,7 @@ class TypeVehicleController extends Controller
         ]);
 
         // Redirect with success message
-        return redirect('/TypeInterventions')->with('success', 'Type Intervention successfully updated');
+        return redirect('/typeVehicles')->with('success', 'Type Intervention successfully updated');
     }
 
 }
