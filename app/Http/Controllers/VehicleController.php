@@ -16,7 +16,7 @@ class VehicleController extends Controller
     public function index()
     {
         // Load all type vehicles with their associated state
-        $Vehicles = Vehicle::all();
+        $Vehicles = Vehicle::with(['type', 'caserne'])->get();
         
         // Otherwise, show the TypeVehicle list page
         return view('Vehicle', compact('Vehicles'));
