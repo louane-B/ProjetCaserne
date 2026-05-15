@@ -46,4 +46,43 @@ class TypeVehicleController extends Controller
         return redirect('/typeVehicles')->with('success', 'Grade successfully added');
     }
 
+    /*
+    |--------------------------------------------------------------------------
+    | Display the edit form for type vehicle
+    |--------------------------------------------------------------------------
+    */
+    public function formModifyTypeVehicle($id)
+    {
+        // Retrieve the fire station or fail if not found
+        $vehicle = TypeVehicle::findOrFail($id);
+
+        return view('typeVehicleModify', compact('vehicle'));
+    }
+
+     /*
+    |--------------------------------------------------------------------------
+    | Update an existing type vehicle
+    |--------------------------------------------------------------------------
+    */
+    public function update($id, Request $request)
+    {
+        // Validate form inputs
+        $request->validate([
+            'code' => 'required',
+            'description' => 'required',
+        ]);
+
+        // Retrieve the type vehicle
+        $vehicle = TypeVehicle::findOrFail($id);
+
+        // Update the type Intervention
+        $vehicle->update([
+            'code' => $request->code,
+            'description' => $request->description,
+        ]);
+
+        // Redirect with success message
+        return redirect('/typeVehicles')->with('success', 'Type Intervention successfully updated');
+    }
+
 }

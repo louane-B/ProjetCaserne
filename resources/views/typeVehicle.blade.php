@@ -6,6 +6,14 @@
 <h2 class="mb-4">list of typeVehicle</h2>
 </br>
 
+{{-- Success message displayed after an action (add, update, delete, clear) --}}
+@if(session('success'))
+    <div class="alert alert-success">
+        {{ session('success') }}
+    </div>
+@endif
+
+
 </br>
 
 {{-- Table displaying all  grade --}}
@@ -14,6 +22,7 @@
         <tr>
             <th>Code</th>
             <th>Description</th>
+            <th style="width: 200px;">Actions</th>
         </tr>
 
     </thread>
@@ -23,6 +32,12 @@
         <tr>
             <td>{{ $vehicle->code }}</td>
             <td>{{ $vehicle->description }}</td>
+            <td>
+                    {{-- Edit button --}}
+                    <a href="{{ route('typeVehicle.edit', $vehicle->id) }}" class="btn btn-warning btn_sm">
+                        Modifier
+                    </a>
+            </td>
         </tr>
         @endforeach
     </tbody>
