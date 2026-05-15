@@ -28,4 +28,29 @@
     </tbody>
 </table>
 
+</br>
+<hr class="my-4">
+
+{{-- Section title for adding a new type Vehicle --}}
+<h2 class="mb-4 text-center">Add a New Type Vehicle</h2>
+
+{{-- Form to add a new typeVehicle --}}
+<form action="{{ route('typeVehicle.add') }}" method="POST" class="border p-4 rounded bg-light">
+    @csrf 
+
+    {{-- type Vehicle code --}}
+    <div class="mb-3">
+        <label class="form-label">type Vehicle code</label>
+        <input type="string" name="code" class="form-control" required>
+    </div>
+
+    {{-- type Vehicle description --}}
+    <div class="mb-3">
+        <label class="form-label">Type Vehicle description</label>
+        <input type="string" name="description" class="form-control" required>
+    </div>
+
+    <button type="Submit" class="btn btn-primary w-100">Add New typeVehicle</button>
+
+</form>
 @endsection
