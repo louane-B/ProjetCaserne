@@ -115,8 +115,8 @@ class InterventionController extends Controller
     public function clear()
     {
         // Remove all  intervention records
-        Intervention::truncate();
-
+        Intervention::query()->delete();
+        
         return redirect('/FireStations')->with('success', 'All Intervention have been deleted');
     }
 }

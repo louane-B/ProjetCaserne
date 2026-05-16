@@ -68,7 +68,7 @@ class GradeController extends Controller
     public function clear()
     {
         // Remove all  intervention records
-        Grade::truncate();
+        Grade::query()->delete();
 
         return redirect('/grades')->with('success', 'All Grade have been deleted');
     }

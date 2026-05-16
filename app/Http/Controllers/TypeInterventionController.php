@@ -108,7 +108,7 @@ class TypeInterventionController extends Controller
     public function clear()
     {
         // Remove all type intervention records
-        TypeIntervention::truncate();
+        TypeIntervention::query()->delete();
 
         return redirect('/TypeInterventions')->with('success', 'All fire stations have been deleted');
     }

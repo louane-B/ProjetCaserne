@@ -127,7 +127,7 @@ class FireStationController extends Controller
     public function clear()
     {
         // Remove all fire station records
-        FireStation::truncate();
+        FireStation::query()->delete();
 
         return redirect('/FireStations')->with('success', 'All fire stations have been deleted');
     }

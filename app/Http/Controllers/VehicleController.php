@@ -136,7 +136,7 @@ class VehicleController extends Controller
     public function clear()
     {
         // Remove all type intervention records
-        Vehicle::truncate();
+        Vehicle::query()->delete();
 
         return redirect('/vehicles')->with('success', 'All vehicle have been deleted');
     }
