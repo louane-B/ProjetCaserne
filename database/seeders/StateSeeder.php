@@ -10,10 +10,16 @@ class StateSeeder extends Seeder
     public function run(): void
     {
         $states = [
-            ['description' => 'Active'],
-            ['description' => 'Inactive'],
-            ['description' => 'Under Maintenance'],
-            ['description' => 'Closed'],
+            ['description' => 'Colombie-Britannique'],
+            ['description' => 'Alberta'],
+            ['description' => 'Saskatchewan'],
+            ['description' => 'Manitoba'],
+            ['description' => 'Ontario'],
+            ['description' => 'Quebec'],
+            ['description' => 'Terre-Neuve-et-Labrador'],
+            ['description' => 'Nouveau-Brunswick'],
+            ['description' => 'Île-du-Prince-Édouard'],
+            ['description' => 'Nouvelle-Écosse'],
         ];
 
         foreach ($states as $state) {

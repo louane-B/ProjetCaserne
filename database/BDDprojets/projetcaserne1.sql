@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: May 15, 2026 at 02:08 PM
+-- Generation Time: May 16, 2026 at 07:03 PM
 -- Server version: 8.4.3
 -- PHP Version: 8.5.5
 
@@ -45,34 +45,34 @@ CREATE TABLE `firefighters` (
 --
 
 INSERT INTO `firefighters` (`id`, `matricule`, `grade_id`, `nom`, `prenom`, `fire_station_id`, `created_at`, `updated_at`) VALUES
-(1, 'FF-581', 5, 'Gleason', 'Dayna', 7, NULL, NULL),
-(2, 'FF-559', 1, 'Lemke', 'Nayeli', 3, NULL, NULL),
-(3, 'FF-436', 7, 'Langosh', 'Edyth', 3, NULL, NULL),
-(4, 'FF-767', 6, 'Wisozk', 'Lilliana', 6, NULL, NULL),
-(5, 'FF-360', 5, 'Bednar', 'Lulu', 8, NULL, NULL),
-(6, 'FF-262', 2, 'Gusikowski', 'Doris', 2, NULL, NULL),
-(7, 'FF-069', 7, 'Schimmel', 'Mellie', 2, NULL, NULL),
-(8, 'FF-359', 1, 'Zemlak', 'Allan', 5, NULL, NULL),
-(9, 'FF-288', 1, 'Torp', 'Tyler', 5, NULL, NULL),
-(10, 'FF-231', 3, 'Bosco', 'Scarlett', 2, NULL, NULL),
-(11, 'FF-443', 5, 'Padberg', 'Maye', 4, NULL, NULL),
-(12, 'FF-344', 1, 'Keebler', 'Walker', 10, NULL, NULL),
-(13, 'FF-977', 6, 'Littel', 'Barrett', 9, NULL, NULL),
-(14, 'FF-441', 3, 'Rodriguez', 'Weston', 7, NULL, NULL),
-(15, 'FF-864', 5, 'Lynch', 'Brandy', 5, NULL, NULL),
-(16, 'FF-780', 7, 'Bergstrom', 'Penelope', 8, NULL, NULL),
-(17, 'FF-086', 5, 'Dickens', 'Felicita', 8, NULL, NULL),
-(18, 'FF-408', 7, 'Thompson', 'Karley', 10, NULL, NULL),
-(19, 'FF-984', 6, 'Kunde', 'Jakayla', 8, NULL, NULL),
-(20, 'FF-204', 6, 'Hickle', 'Donavon', 5, NULL, NULL),
-(21, 'FF-656', 3, 'Hoppe', 'Matteo', 3, NULL, NULL),
-(22, 'FF-527', 3, 'Jacobi', 'Kaycee', 8, NULL, NULL),
-(23, 'FF-444', 3, 'Douglas', 'Rogers', 4, NULL, NULL),
-(24, 'FF-109', 3, 'Crist', 'Rickie', 6, NULL, NULL),
-(25, 'FF-547', 3, 'Strosin', 'Durward', 9, NULL, NULL),
-(26, 'FF-563', 3, 'Altenwerth', 'Ursula', 10, NULL, NULL),
-(27, 'FF-417', 3, 'Gaylord', 'Agustina', 5, NULL, NULL),
-(28, 'FF-821', 3, 'Maggio', 'Lauriane', 1, NULL, NULL);
+(1, 'FF-194', 6, 'Muller', 'Trent', 10, NULL, NULL),
+(2, 'FF-073', 4, 'Gusikowski', 'Nadia', 7, NULL, NULL),
+(3, 'FF-492', 5, 'Padberg', 'Kayleigh', 8, NULL, NULL),
+(4, 'FF-756', 1, 'Jerde', 'Rosario', 3, NULL, NULL),
+(5, 'FF-576', 6, 'Reichel', 'Armando', 4, NULL, NULL),
+(6, 'FF-991', 5, 'Stroman', 'Adriana', 5, NULL, NULL),
+(7, 'FF-947', 4, 'Walker', 'Birdie', 7, NULL, NULL),
+(8, 'FF-313', 2, 'Howell', 'Velva', 4, NULL, NULL),
+(9, 'FF-858', 7, 'Wiza', 'Maida', 4, NULL, NULL),
+(10, 'FF-937', 5, 'Klein', 'Kevin', 9, NULL, NULL),
+(11, 'FF-768', 7, 'Stoltenberg', 'Blaze', 10, NULL, NULL),
+(12, 'FF-016', 2, 'Huels', 'Zetta', 9, NULL, NULL),
+(13, 'FF-359', 3, 'Medhurst', 'Keith', 10, NULL, NULL),
+(14, 'FF-626', 1, 'Schmitt', 'Nicholas', 10, NULL, NULL),
+(15, 'FF-876', 3, 'Feil', 'Krystel', 6, NULL, NULL),
+(16, 'FF-317', 4, 'Balistreri', 'Marielle', 5, NULL, NULL),
+(17, 'FF-251', 1, 'Berge', 'Sigmund', 1, NULL, NULL),
+(18, 'FF-725', 2, 'Stokes', 'Madyson', 2, NULL, NULL),
+(19, 'FF-866', 4, 'Denesik', 'Allison', 4, NULL, NULL),
+(20, 'FF-863', 2, 'Marquardt', 'Johnpaul', 9, NULL, NULL),
+(21, 'FF-600', 3, 'Stracke', 'Cordia', 9, NULL, NULL),
+(22, 'FF-122', 3, 'Wuckert', 'April', 8, NULL, NULL),
+(23, 'FF-243', 3, 'Ratke', 'Jessika', 1, NULL, NULL),
+(24, 'FF-280', 3, 'Johns', 'Loyce', 7, NULL, NULL),
+(25, 'FF-040', 3, 'Jacobson', 'Billy', 5, NULL, NULL),
+(26, 'FF-683', 3, 'Hirthe', 'Jarred', 4, NULL, NULL),
+(27, 'FF-247', 3, 'Bergstrom', 'Mekhi', 2, NULL, NULL),
+(28, 'FF-763', 3, 'Mertz', 'Darwin', 3, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -96,16 +96,16 @@ CREATE TABLE `fire_stations` (
 --
 
 INSERT INTO `fire_stations` (`id`, `name`, `adress`, `city`, `phone`, `state_id`, `created_at`, `updated_at`) VALUES
-(1, 'Paucek-Schamberger Fire Station', '517 Nannie Shore', 'Zaneville', '1-352-958-3858', 4, NULL, NULL),
-(2, 'Erdman-Runolfsson Fire Station', '86829 Emmet Islands', 'Port Winifredberg', '914-520-4385', 2, NULL, NULL),
-(3, 'Koch-Blanda Fire Station', '19590 Hirthe Crest', 'Hillview', '1-850-667-4954', 3, NULL, NULL),
-(4, 'McCullough LLC Fire Station', '769 Rick Expressway Suite 369', 'East Millie', '+1-217-484-8357', 1, NULL, NULL),
-(5, 'Sauer LLC Fire Station', '44524 Jennyfer Hollow', 'Roweville', '(228) 975-1739', 3, NULL, NULL),
-(6, 'Smitham, Hagenes and Haag Fire Station', '45619 Sally Ridges Apt. 817', 'Port Felixberg', '+1-929-386-4823', 3, NULL, NULL),
-(7, 'Ankunding-Schmidt Fire Station', '886 Clay Mount Suite 014', 'North Rosalee', '+1.213.472.7085', 2, NULL, NULL),
-(8, 'Kuvalis-Reichert Fire Station', '161 Alberta Summit', 'North Amiyaview', '+1 (224) 899-9177', 4, NULL, NULL),
-(9, 'Block, Wintheiser and Kuhn Fire Station', '30013 Brekke Well Suite 973', 'Ferryhaven', '+1-701-703-9235', 4, NULL, NULL),
-(10, 'Hammes-Runolfsdottir Fire Station', '753 Lorenza Center', 'South Alleneland', '+1-843-469-9243', 4, NULL, NULL);
+(1, 'Runolfsson, Rau and Turcotte Fire Station', '70167 Zoie Track', 'Anitaborough', '360.842.6861', 8, NULL, NULL),
+(2, 'Hansen-Champlin Fire Station', '33401 Rae Ford', 'East Rossie', '1-320-992-4603', 5, NULL, NULL),
+(3, 'Herman-Russel Fire Station', '130 Powlowski Viaduct Suite 311', 'Amelymouth', '563-350-1964', 2, NULL, NULL),
+(4, 'Zemlak Inc Fire Station', '1583 Marian Loaf Apt. 963', 'Lueilwitzhaven', '(386) 333-5921', 2, NULL, NULL),
+(5, 'Waters PLC Fire Station', '439 Zachariah Lodge', 'Farrellbury', '+1-828-944-1577', 2, NULL, NULL),
+(6, 'Champlin and Sons Fire Station', '286 Alda Landing Apt. 208', 'North Adelastad', '1-310-637-7770', 5, NULL, NULL),
+(7, 'Gusikowski Ltd Fire Station', '31839 Javon Trace', 'Marilouville', '(231) 252-9774', 9, NULL, NULL),
+(8, 'Towne LLC Fire Station', '432 Batz Neck', 'North Tomside', '+1.269.424.0800', 2, NULL, NULL),
+(9, 'Keeling, Harber and Simonis Fire Station', '782 Kuphal Way Apt. 196', 'Lake Sandrashire', '+1.702.437.0987', 6, NULL, NULL),
+(10, 'Hickle-Zieme Fire Station', '9373 Stephan Valley', 'New Violette', '+1 (410) 937-3018', 8, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -157,56 +157,56 @@ CREATE TABLE `interventions` (
 --
 
 INSERT INTO `interventions` (`id`, `DateTempsDebut`, `Adresse`, `Resume`, `type_intervention_id`, `fire_station_id`, `captain_id`, `created_at`, `updated_at`) VALUES
-(1, '2025-11-24 08:52:40', '319 Bernard Burgs\nMariahview, ME 78058-1371', 'Nostrum et quidem ea porro saepe excepturi dicta.', 10, 3, 21, NULL, NULL),
-(2, '2025-06-01 22:06:19', '6917 West Extensions Suite 712\nLeoraborough, AL 47965', 'Vel in repellendus minus alias et beatae laborum qui praesentium quo error est ipsum repellendus ut.', 20, 8, 22, NULL, NULL),
-(3, '2025-12-27 15:55:24', '7221 Javonte Highway\nPort Ariton, IL 34080-2558', 'Et vel voluptatem sint soluta excepturi esse minima dolorem quidem neque rerum in quo.', 11, 4, 23, NULL, NULL),
-(4, '2025-08-30 00:03:48', '7848 Caleigh Trafficway Suite 865\nLake Immanuel, OH 55553-5909', 'Doloribus qui ea dicta sit deserunt cupiditate officiis.', 24, 8, 22, NULL, NULL),
-(5, '2025-11-23 04:15:58', '5489 Turcotte Course Suite 215\nMannside, VT 07734-2507', 'Eum et vero quaerat et non eaque laborum doloribus modi doloribus ullam rerum laborum nam animi veniam.', 3, 2, 10, NULL, NULL),
-(6, '2026-01-15 04:21:21', '669 Dibbert River Apt. 016\nSouth Dejuanville, NV 61811', 'Laboriosam rerum distinctio rerum est itaque dolor voluptate voluptatem minus autem maiores ex voluptatem fugiat.', 16, 6, 24, NULL, NULL),
-(7, '2025-12-13 22:55:13', '84670 Beahan Terrace Apt. 130\nHymanbury, MN 72138', 'Recusandae maxime adipisci autem enim veritatis aut quia.', 24, 4, 23, NULL, NULL),
-(8, '2025-10-31 08:56:27', '9108 Zachary Shoals\nStromanburgh, IL 86297', 'Nihil temporibus error repellendus exercitationem delectus qui voluptatem commodi nisi blanditiis dolor.', 22, 7, 14, NULL, NULL),
-(9, '2025-10-01 10:05:12', '6968 Hettinger Lock Apt. 150\nSouth Retta, CA 60180-9903', 'Officiis vel sint qui dolores rerum provident et qui cupiditate.', 4, 4, 23, NULL, NULL),
-(10, '2026-03-01 13:49:24', '5574 Joel Camp Apt. 321\nPort Jamieberg, MA 27152', 'A itaque eveniet nostrum debitis et exercitationem quaerat laudantium rerum dolor praesentium quam est tempora nihil consequuntur.', 24, 9, 25, NULL, NULL),
-(11, '2026-01-05 18:50:26', '993 Marquardt Plaza Suite 942\nWest Margretton, TX 02792', 'Recusandae voluptatem molestiae voluptatem rerum qui ratione est earum est minima quis reprehenderit tempora dolorum et est.', 7, 10, 26, NULL, NULL),
-(12, '2025-12-29 18:36:28', '8408 Jeanette Shores\nLake Gretchen, AL 80692-9324', 'Labore ea non aut sit qui doloremque occaecati cum aliquam eum officiis et est et et voluptatem.', 11, 3, 21, NULL, NULL),
-(13, '2025-12-17 05:55:02', '11661 Bayer Brook Apt. 088\nNorth Dominicburgh, IN 32705', 'Eveniet quasi maiores porro quasi excepturi deserunt alias sequi iusto repellat et dolores sunt est.', 17, 3, 21, NULL, NULL),
-(14, '2026-01-08 12:16:03', '454 Zieme Gardens Suite 092\nWest Moses, NY 90536', 'Sit earum quisquam odio consequatur quia non voluptas excepturi ut vitae modi incidunt excepturi odit.', 4, 5, 27, NULL, NULL),
-(15, '2026-03-15 20:11:42', '917 Emmerich Trail Suite 519\nSouth Mackenzieville, MN 77919-9553', 'Ut sunt voluptatem reprehenderit repellendus repellendus dolores aut facere reprehenderit.', 16, 8, 22, NULL, NULL),
-(16, '2025-09-11 14:01:31', '1423 Schmidt Brook Suite 726\nLake Steve, OH 87178-9947', 'Recusandae eius voluptates est et suscipit repellat dolores nobis in et quos error perferendis harum.', 26, 5, 27, NULL, NULL),
-(17, '2025-08-24 00:07:16', '48069 Kertzmann Springs Apt. 972\nSchinnerburgh, WV 44252', 'Occaecati id perspiciatis et tempora atque culpa quia perferendis voluptas rerum.', 21, 2, 10, NULL, NULL),
-(18, '2026-03-17 21:14:59', '974 Kertzmann Via\nLake Crystelport, WV 68494', 'Et eos voluptate blanditiis velit nostrum aperiam doloremque reprehenderit temporibus fuga optio repudiandae.', 15, 7, 14, NULL, NULL),
-(19, '2025-10-08 07:40:40', '60774 Ervin Center Apt. 346\nKleinport, VT 08508-7292', 'Rem nihil ipsa quam voluptas debitis enim nostrum sed dolor.', 4, 5, 27, NULL, NULL),
-(20, '2025-12-18 03:20:40', '7840 McGlynn Lane Apt. 991\nWest Jaymestad, MO 35485-5587', 'Qui in consectetur sit sit sit officia facere qui expedita nostrum et quia perferendis aliquam consequatur.', 18, 6, 24, NULL, NULL),
-(21, '2025-07-06 13:13:36', '1582 Taryn Greens\nTremblayfort, OH 34869-7435', 'Asperiores voluptates dolorem enim minima sed non nihil cupiditate dolorem voluptatem modi voluptatum est rerum.', 19, 4, 23, NULL, NULL),
-(22, '2025-10-07 11:20:48', '45131 Schinner Court\nTiannaburgh, MN 81726', 'Accusamus earum nesciunt eaque dolor ad quisquam est dolor quam et facere corporis.', 19, 3, 21, NULL, NULL),
-(23, '2026-03-10 01:58:54', '85149 Bruen Squares\nDaijaview, DC 27951-8881', 'Est accusamus et dolorem consequatur nostrum cupiditate voluptatem ea et.', 8, 4, 23, NULL, NULL),
-(24, '2025-08-04 14:03:54', '988 Ziemann Highway Apt. 309\nNorth Anabelshire, MI 65499', 'Et numquam voluptatibus inventore accusantium doloremque qui sequi.', 9, 3, 21, NULL, NULL),
-(25, '2026-03-16 17:33:49', '75197 Breitenberg Field\nNew Annamarieport, NV 42263-8735', 'Est sint adipisci omnis illum officiis in consectetur.', 4, 1, 28, NULL, NULL),
-(26, '2025-11-06 23:11:13', '523 O\'Reilly Creek\nLake Bennett, ND 91957', 'Officia et dolores consequatur doloremque accusantium voluptatum molestias nam aspernatur omnis in rerum incidunt velit qui optio.', 3, 5, 27, NULL, NULL),
-(27, '2025-10-16 19:05:53', '9482 Lina Forks\nKatelynberg, NM 00570-1798', 'Perspiciatis iure at explicabo alias cumque debitis est praesentium inventore nam odit accusamus commodi autem.', 26, 7, 14, NULL, NULL),
-(28, '2026-03-14 20:28:33', '8487 Sawayn Fields Suite 982\nBethelville, HI 53320', 'Unde et dolores quia repudiandae est voluptatem repudiandae est illo provident.', 25, 5, 27, NULL, NULL),
-(29, '2025-08-31 04:34:07', '5642 Shanie Passage\nLake Leobury, MA 89557', 'Harum maiores atque non quo nesciunt dignissimos aut quis maiores deserunt veniam consequuntur enim.', 7, 9, 25, NULL, NULL),
-(30, '2026-05-08 13:02:59', '177 Parker Fall Suite 643\nKiraberg, GA 16118-7609', 'Repudiandae eveniet earum aspernatur quam reprehenderit sequi molestias.', 14, 5, 27, NULL, NULL),
-(31, '2026-02-25 04:26:09', '22488 Emmitt Fields Apt. 826\nMoisesville, MN 22906-9061', 'A excepturi tempora dignissimos sed voluptatem voluptas sit odio.', 8, 8, 22, NULL, NULL),
-(32, '2025-06-23 14:51:12', '109 McCullough Divide Apt. 414\nNew Alberthafurt, OK 94454-5727', 'Autem non doloremque dolorem exercitationem quia ut voluptatem modi quia.', 5, 9, 25, NULL, NULL),
-(33, '2025-08-14 19:40:49', '67586 Burnice Street\nLurlineport, SD 29572-0858', 'Deserunt totam et culpa qui modi accusamus quo sed aliquid facere ad tenetur magni veritatis.', 16, 2, 10, NULL, NULL),
-(34, '2025-05-25 14:41:55', '269 Marques Glens Suite 550\nHyattberg, IN 86600-2378', 'Vitae est magni dignissimos repellat illum quo doloribus ipsam aut illum consequuntur dolor aliquid est eum.', 11, 3, 21, NULL, NULL),
-(35, '2026-04-09 14:28:01', '6036 Luettgen Branch Apt. 778\nDamonshire, LA 09675-3838', 'Ea tempore est dolores et beatae nam nesciunt.', 19, 3, 21, NULL, NULL),
-(36, '2026-03-21 14:42:54', '1169 Haven Court Suite 161\nWest Hillary, NE 24553', 'Quibusdam nihil quae consequatur illo minus autem omnis ut.', 3, 4, 23, NULL, NULL),
-(37, '2025-10-27 17:11:47', '227 Douglas Ports Apt. 191\nSouth Jakob, MO 00759', 'Et necessitatibus consectetur beatae ea tempora qui necessitatibus dolorem fugiat.', 6, 5, 27, NULL, NULL),
-(38, '2026-04-16 06:59:06', '42332 Howe Creek Suite 145\nBuckridgehaven, DC 71829', 'Aut explicabo rerum delectus nam et nisi minima iusto adipisci voluptates explicabo reiciendis.', 17, 10, 26, NULL, NULL),
-(39, '2026-02-14 01:01:09', '71177 Christelle Cove\nSouth Devynview, VA 72588', 'Ratione aliquam et qui et quidem accusamus architecto sit inventore omnis aut.', 8, 1, 28, NULL, NULL),
-(40, '2026-03-10 11:21:28', '751 Hayes Radial Suite 814\nSouth Flavioland, PA 84659', 'Dignissimos quia quia quaerat totam facilis nihil eum placeat.', 3, 9, 25, NULL, NULL),
-(41, '2026-01-09 17:44:12', '158 Erik Parkway\nWest Eileen, DE 42092-0021', 'Et non a minima labore nobis nesciunt laborum sit.', 24, 2, 10, NULL, NULL),
-(42, '2025-09-28 21:48:58', '566 Wilkinson Plain Suite 507\nDavisbury, FL 84941-7586', 'Voluptas repellat facere sunt ut quibusdam ad rerum commodi aut et consequatur repudiandae harum rerum.', 24, 6, 24, NULL, NULL),
-(43, '2026-05-04 19:08:18', '4320 Rogahn Roads\nEast Olinland, VA 36515-0079', 'Fugit aut sint qui autem non quae enim sed ipsa.', 10, 10, 26, NULL, NULL),
-(44, '2026-02-17 14:49:39', '5942 Abby Loaf Apt. 235\nSarahborough, MS 36464-6471', 'Impedit recusandae aut nobis quod at vel est cum id maxime dicta beatae deleniti id explicabo.', 22, 5, 27, NULL, NULL),
-(45, '2026-03-03 07:56:44', '92479 Huel Track\nLake Nathanael, ME 71258-6682', 'Id iure eum tempora veritatis possimus consequatur rem ut accusamus in minus reprehenderit qui.', 27, 1, 28, NULL, NULL),
-(46, '2025-08-10 17:46:50', '70472 Curtis Island\nStarkberg, VA 34680', 'Nostrum possimus quos impedit accusantium eos dolor ullam repellendus laboriosam beatae sit magni.', 24, 1, 28, NULL, NULL),
-(47, '2025-08-17 15:00:01', '395 Keebler Mission\nNew Kelli, AK 02537', 'Sit voluptatem voluptatibus et ut corrupti consequatur sed sunt laboriosam provident nihil aut magnam.', 13, 5, 27, NULL, NULL),
-(48, '2025-11-10 12:02:17', '69212 Schulist Ports\nAbagailside, UT 40410-9857', 'Laboriosam vel aut rerum perferendis aliquid ut consequuntur perferendis id iste quo atque aperiam et provident.', 17, 6, 24, NULL, NULL),
-(49, '2026-01-24 17:02:39', '6592 Ettie Ford\nNew Marcia, OH 69458-3137', 'Iure et sunt nobis minus aperiam rerum qui nam aspernatur alias voluptatibus occaecati ad adipisci beatae.', 4, 3, 21, NULL, NULL),
-(50, '2026-02-10 08:06:42', '77155 Gutkowski Ville Apt. 237\nNew Lou, AZ 38155', 'Quisquam aut omnis quis cupiditate illo quod totam voluptas voluptas deleniti.', 16, 10, 26, NULL, NULL);
+(1, '2025-09-23 02:49:01', '13264 Schimmel Lights\nWest Libbyville, CO 91358', 'Repellendus voluptas consectetur veritatis natus enim tenetur voluptatem hic consectetur facere repellat laudantium.', 2, 9, 21, NULL, NULL),
+(2, '2025-10-17 08:28:22', '1250 Fabiola Manors\nNorth Marysehaven, SD 00435-0899', 'Officia qui ipsa tempore et sint voluptatem eum quae consequuntur pariatur occaecati aliquid placeat.', 3, 8, 22, NULL, NULL),
+(3, '2025-11-01 11:09:53', '889 Hansen Lake\nCraigside, NE 65969', 'Nisi sapiente qui ut aut quidem velit est facilis inventore blanditiis accusamus.', 13, 1, 23, NULL, NULL),
+(4, '2025-08-26 02:33:33', '750 Pouros Square\nPort Kathrynstad, TX 99231-5424', 'Iure illum cumque non modi fugiat itaque dolorem et distinctio quasi est illum aliquid ad perspiciatis.', 15, 1, 23, NULL, NULL),
+(5, '2026-05-15 10:40:45', '852 Dach Underpass Suite 758\nPort Fay, AL 69062', 'Omnis error voluptas et dicta molestiae veniam quis consequatur omnis est.', 15, 7, 24, NULL, NULL),
+(6, '2026-01-21 06:58:02', '8798 Jany Points\nWisokyton, NV 19213', 'Nesciunt laboriosam voluptate nemo iusto asperiores a quia autem perferendis quas vero est velit aperiam corporis.', 1, 7, 24, NULL, NULL),
+(7, '2026-05-10 15:53:02', '15606 Brielle Falls\nMeaghanberg, NH 95444', 'Error perferendis quos tempore voluptatem temporibus consequuntur in.', 10, 6, 15, NULL, NULL),
+(8, '2025-09-17 08:23:04', '21154 Helen Pass Apt. 665\nSouth Ralph, DC 83517-6403', 'Assumenda ad quod nesciunt debitis rerum animi molestiae quia.', 2, 8, 22, NULL, NULL),
+(9, '2025-07-30 09:29:54', '524 Norbert Skyway Suite 969\nSouth Claire, WA 41004', 'Ut et dolorem qui et est optio dolorem consectetur at dicta incidunt.', 19, 5, 25, NULL, NULL),
+(10, '2026-01-05 15:30:05', '357 Ziemann Turnpike Suite 769\nKertzmannbury, DE 18439', 'Omnis adipisci aperiam pariatur provident ut in qui occaecati omnis numquam ab laborum sunt.', 20, 8, 22, NULL, NULL),
+(11, '2025-06-11 21:32:47', '33375 Lakin Oval\nHeaneybury, RI 30298', 'Et incidunt enim sunt ut quibusdam et velit in ratione repudiandae.', 17, 10, 13, NULL, NULL),
+(12, '2025-08-11 18:52:55', '38797 Adams Crest Suite 592\nNorth Rosalindastad, MI 76211-5021', 'Aliquid nostrum laborum natus facere dolore nihil et est laudantium magni voluptas ullam tempora ut reprehenderit.', 3, 6, 15, NULL, NULL),
+(13, '2025-07-18 06:34:58', '43250 Blanda Meadow\nSouth Bernhardton, WI 38484', 'Accusantium sunt praesentium non minima voluptatum fugit atque.', 18, 7, 24, NULL, NULL),
+(14, '2025-09-25 19:04:46', '1224 Larue Passage\nPadbergland, OK 31187-2007', 'Dolorem et ut ipsa commodi quae quo eum dolor quis excepturi quis ipsum ut qui qui.', 20, 4, 26, NULL, NULL),
+(15, '2026-02-10 14:34:06', '51415 Jaden Haven\nWest Donna, NY 24743', 'In eius eaque et fuga maiores ullam facilis velit amet in ratione aut sed similique aut necessitatibus.', 3, 7, 24, NULL, NULL),
+(16, '2025-06-24 07:44:00', '6866 O\'Keefe Throughway\nNorth Courtneyberg, ME 93610', 'Minima natus id expedita ut voluptates explicabo repellendus eum maiores.', 2, 9, 21, NULL, NULL),
+(17, '2025-08-16 17:10:05', '7766 Cremin Lakes Apt. 216\nStanfordmouth, NM 72656-0313', 'Et voluptatem occaecati qui quasi quia voluptatem sunt architecto suscipit.', 14, 2, 27, NULL, NULL),
+(18, '2025-07-28 03:02:45', '543 Marcos Burg Suite 061\nPort Arleneview, AL 48050', 'Labore vel nesciunt in et dolore distinctio voluptates cumque sed adipisci accusamus.', 19, 5, 25, NULL, NULL),
+(19, '2026-05-10 15:30:28', '134 Kim Pike Suite 737\nWeberhaven, GA 42499', 'Placeat fugiat praesentium et animi ipsa vero tempora consequuntur sint nisi optio dolor iusto nostrum cupiditate.', 20, 5, 25, NULL, NULL),
+(20, '2025-12-01 04:32:24', '709 Bernhard Via\nSouth Kristin, NE 60454-2243', 'Nesciunt enim recusandae atque laudantium iure quis praesentium laboriosam fuga id rerum est dolore vel incidunt.', 19, 1, 23, NULL, NULL),
+(21, '2025-09-17 08:03:51', '64313 Nelda Ferry\nKesslerhaven, LA 19109-6218', 'Aliquam fugiat quas maxime cumque mollitia ullam rerum qui.', 8, 6, 15, NULL, NULL),
+(22, '2025-06-28 17:07:39', '7743 Loraine Divide\nJosianneborough, NV 40375-1612', 'Et a sit reprehenderit accusantium ipsum et rem dolorem.', 23, 1, 23, NULL, NULL),
+(23, '2025-09-01 22:32:43', '73461 Strosin Square\nHeathcoteside, KS 67803-7044', 'Dolor et in illo est optio magnam voluptas deleniti facere velit placeat labore et quos eligendi.', 11, 4, 26, NULL, NULL),
+(24, '2025-11-12 01:26:52', '40486 Lynch Route Apt. 029\nHildaborough, NJ 46719', 'Vitae et aut soluta non est nobis quia hic cumque recusandae qui quam quis veniam.', 25, 3, 28, NULL, NULL),
+(25, '2025-08-13 18:01:32', '9493 McClure Prairie Suite 506\nPort Willy, UT 97483', 'Quia consequatur iusto at unde aut dolor et eum placeat ipsa.', 11, 6, 15, NULL, NULL),
+(26, '2026-01-15 20:48:15', '13712 Reilly Wall\nStrosinfort, IA 74202', 'Omnis ducimus ab nobis enim suscipit voluptates error rerum rerum maxime ea nemo.', 13, 5, 25, NULL, NULL),
+(27, '2026-04-26 12:43:00', '4164 Yost Station\nNew Cecilia, NV 86612-7408', 'Quas odio tempora officia sunt et earum dicta magni ut modi voluptatum vel nesciunt voluptatem eos.', 22, 1, 23, NULL, NULL),
+(28, '2025-05-29 05:22:34', '546 Klein Causeway\nPort Richmond, NY 36897', 'Numquam quo in quas soluta rem voluptatem quas reprehenderit sed non minus corporis minima.', 17, 1, 23, NULL, NULL),
+(29, '2026-01-04 07:56:12', '7203 Boyle Course Apt. 321\nEast Marcelo, NV 96595-0502', 'Dolorem fugit ducimus pariatur et provident repellat aut ea et itaque qui voluptatem ex nobis.', 12, 4, 26, NULL, NULL),
+(30, '2026-02-22 05:16:16', '6868 Schmidt Trace Suite 990\nWuckertchester, MN 36179-6743', 'Voluptas totam rerum sapiente perferendis vel repudiandae ut ut et.', 13, 2, 27, NULL, NULL),
+(31, '2025-06-02 18:43:58', '394 Kody Court\nMuellerchester, NJ 11490-3909', 'Ad ea ratione ab earum iure sint enim aut et.', 10, 1, 23, NULL, NULL),
+(32, '2025-06-26 17:23:44', '609 Tremaine Landing Suite 227\nRowefurt, ID 25664', 'Non blanditiis aperiam iste praesentium tenetur enim et enim et enim.', 7, 3, 28, NULL, NULL),
+(33, '2026-02-08 10:42:49', '54581 Leola Place Suite 666\nWest Margaretteside, CA 42368', 'Ipsum aut placeat odio in aspernatur ratione assumenda perferendis animi quae aut ut ex vero enim laudantium.', 27, 9, 21, NULL, NULL),
+(34, '2026-01-11 22:01:04', '12397 Dietrich Springs\nAltenwerthhaven, PA 82895', 'Assumenda tenetur qui saepe aspernatur assumenda laborum sit aut vitae incidunt ex in deserunt magni eum.', 17, 5, 25, NULL, NULL),
+(35, '2025-08-06 23:41:31', '1465 Macejkovic Fields Suite 550\nEmmanuelleshire, MI 18636-1761', 'A illum ea qui temporibus est ea totam vel.', 1, 1, 23, NULL, NULL),
+(36, '2025-11-04 20:40:23', '883 Lowe Vista\nWest Danielle, AL 53159', 'Perspiciatis et sunt neque soluta quas odio sit et blanditiis a natus nulla rem quis mollitia repellendus.', 23, 9, 21, NULL, NULL),
+(37, '2026-02-09 16:07:03', '295 Elmira Garden Apt. 203\nYostton, DC 73273', 'Quos aut est illum ad eos in nobis non sed harum repudiandae ut in modi.', 12, 10, 13, NULL, NULL),
+(38, '2026-02-01 02:16:20', '23966 Alvera Neck\nAndersonton, ME 76545-3949', 'Velit ex hic illo id fuga officia et ut voluptatem ea eum quae occaecati assumenda sequi.', 9, 5, 25, NULL, NULL),
+(39, '2025-08-09 11:19:55', '759 Vivien Via Suite 903\nMackland, OH 63713-4429', 'Quis est unde ut porro consequatur explicabo excepturi est perferendis dolor quia pariatur.', 18, 10, 13, NULL, NULL),
+(40, '2025-08-29 17:12:02', '87377 Ebert Road\nNorth Hellenland, WA 08821-8507', 'Porro iure aliquam occaecati voluptatem aut quae qui voluptatem earum quisquam enim quas voluptas nobis nihil.', 8, 9, 21, NULL, NULL),
+(41, '2025-08-23 22:38:30', '378 Jast Land Apt. 038\nEmmerichland, NY 68418-3015', 'Suscipit itaque omnis blanditiis perferendis aliquam dolorum sit et et dolor voluptatem placeat qui dolore officia assumenda.', 22, 4, 26, NULL, NULL),
+(42, '2026-05-15 05:21:24', '45555 Dibbert Island\nNew Danfort, DE 50794', 'Mollitia autem et voluptatem dicta accusamus eius totam sit accusamus aspernatur nulla dolorum dicta nemo.', 14, 5, 25, NULL, NULL),
+(43, '2025-07-11 12:11:47', '2416 Dominique Ranch\nNew Cole, SD 67635-3767', 'Delectus aliquid soluta sed dolorem sunt iusto quia perferendis et architecto suscipit perferendis dolorem aliquam non voluptas.', 25, 3, 28, NULL, NULL),
+(44, '2026-02-15 16:38:02', '11947 Romaguera Fords\nBuddyport, WA 04163-9560', 'Dignissimos iusto excepturi asperiores nihil labore iusto expedita delectus quod voluptatem impedit illo autem occaecati qui perferendis.', 17, 10, 13, NULL, NULL),
+(45, '2025-10-20 03:13:29', '6496 Harris Keys Apt. 384\nKadeton, WA 99361-6142', 'Aliquid quaerat et eum veniam quisquam consectetur quidem eum aut.', 11, 2, 27, NULL, NULL),
+(46, '2025-07-09 10:24:19', '18288 Summer Bridge Apt. 843\nJerdefort, NM 91280-8131', 'Porro est ut aut delectus quia voluptatibus magnam est perferendis distinctio repellendus odit quam consequatur.', 11, 10, 13, NULL, NULL),
+(47, '2026-01-03 02:33:11', '314 Zula Locks Suite 080\nJavonshire, AZ 10734-8842', 'Fugiat et eaque dignissimos quo reiciendis natus ipsum soluta aut sed.', 16, 5, 25, NULL, NULL),
+(48, '2025-06-12 11:26:30', '335 Bobby Mills Apt. 187\nEast Xander, ME 32293', 'Est illum placeat quisquam placeat libero id aspernatur est iste aut magni.', 9, 5, 25, NULL, NULL),
+(49, '2025-11-25 21:53:25', '96606 Jed Centers Suite 487\nFreddiefurt, VT 64279', 'Qui quaerat odio nam qui similique sed quae.', 26, 2, 27, NULL, NULL),
+(50, '2025-11-10 21:52:24', '73792 Desiree Land\nLake Lyric, NE 84768-9277', 'Nobis ut labore atque nam et quis non dolor.', 4, 5, 25, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -255,7 +255,7 @@ CREATE TABLE `sessions` (
 --
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
-('TAn6gg4uZrbbiS2JtgIDkmH1qkDLWwv0bcQ8sbXv', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0', 'eyJfdG9rZW4iOiJLRTlWYU9vWHluMDBwaW5MUG0yZDVKZ0Z5aWdDdWxHS0NRdGIyZkNSIiwiX3ByZXZpb3VzIjp7InVybCI6Imh0dHA6XC9cL3Byb2pldGNhc2VybmUudGVzdFwvdHlwZVZlaGljbGVzIiwicm91dGUiOiJ0eXBlVmVoaWNsZS5pbmRleCJ9LCJfZmxhc2giOnsib2xkIjpbXSwibmV3IjpbXX19', 1778853844);
+('vAQNDVZRv5OLJe1CyNKC3DQGz2qAcFh6PosrLdgI', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0', 'eyJfdG9rZW4iOiJEblVxQmtaTGRick51RllhQXAyUG1PNG9HYnJkMW50NXRDQzBuYXlyIiwiX3ByZXZpb3VzIjp7InVybCI6Imh0dHA6XC9cL3Byb2pldGNhc2VybmUudGVzdFwvRmlyZVN0YXRpb25zIiwicm91dGUiOiJmaXJlc3RhdGlvbnMuaW5kZXgifSwiX2ZsYXNoIjp7Im9sZCI6W10sIm5ldyI6W119fQ==', 1778958144);
 
 -- --------------------------------------------------------
 
@@ -275,10 +275,16 @@ CREATE TABLE `states` (
 --
 
 INSERT INTO `states` (`id`, `description`, `created_at`, `updated_at`) VALUES
-(1, 'Active', NULL, NULL),
-(2, 'Inactive', NULL, NULL),
-(3, 'Under Maintenance', NULL, NULL),
-(4, 'Closed', NULL, NULL);
+(1, 'Colombie-Britannique', NULL, NULL),
+(2, 'Alberta', NULL, NULL),
+(3, 'Saskatchewan', NULL, NULL),
+(4, 'Manitoba', NULL, NULL),
+(5, 'Ontario', NULL, NULL),
+(6, 'Quebec', NULL, NULL),
+(7, 'Terre-Neuve-et-Labrador', NULL, NULL),
+(8, 'Nouveau-Brunswick', NULL, NULL),
+(9, 'Île-du-Prince-Édouard', NULL, NULL),
+(10, 'Nouvelle-Écosse', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -385,26 +391,26 @@ CREATE TABLE `vehicles` (
 --
 
 INSERT INTO `vehicles` (`id`, `NoIdentification`, `Immatriculation`, `AnneeMiseEnService`, `Marque`, `Modele`, `type_vehicle_id`, `fire_station_id`, `created_at`, `updated_at`) VALUES
-(1, 'VEH-183', 'ABC-930', '2003', 'MAN', 'pariatur', 3, 9, NULL, NULL),
-(2, 'VEH-395', 'ABC-792', '1980', 'Renault', 'qui', 12, 3, NULL, NULL),
-(3, 'VEH-930', 'ABC-677', '2004', 'Iveco', 'numquam', 2, 3, NULL, NULL),
-(4, 'VEH-208', 'ABC-737', '2004', 'Mercedes', 'eius', 11, 2, NULL, NULL),
-(5, 'VEH-937', 'ABC-321', '2016', 'Iveco', 'repellendus', 10, 5, NULL, NULL),
-(6, 'VEH-050', 'ABC-108', '1993', 'Renault', 'sit', 2, 6, NULL, NULL),
-(7, 'VEH-290', 'ABC-155', '1979', 'Renault', 'dolorem', 3, 3, NULL, NULL),
-(8, 'VEH-573', 'ABC-253', '1990', 'Renault', 'est', 11, 7, NULL, NULL),
-(9, 'VEH-340', 'ABC-946', '2003', 'Iveco', 'quia', 10, 5, NULL, NULL),
-(10, 'VEH-561', 'ABC-161', '1990', 'MAN', 'et', 8, 2, NULL, NULL),
-(11, 'VEH-002', 'ABC-503', '2012', 'MAN', 'repudiandae', 12, 10, NULL, NULL),
-(12, 'VEH-595', 'ABC-848', '2019', 'Iveco', 'ut', 7, 6, NULL, NULL),
-(13, 'VEH-999', 'ABC-275', '1976', 'Renault', 'at', 5, 6, NULL, NULL),
-(14, 'VEH-818', 'ABC-131', '1986', 'Iveco', 'enim', 11, 5, NULL, NULL),
-(15, 'VEH-154', 'ABC-895', '2003', 'Iveco', 'cumque', 14, 3, NULL, NULL),
-(16, 'VEH-816', 'ABC-080', '1986', 'Iveco', 'commodi', 12, 10, NULL, NULL),
-(17, 'VEH-832', 'ABC-822', '2013', 'Renault', 'perferendis', 12, 4, NULL, NULL),
-(18, 'VEH-127', 'ABC-533', '1996', 'Renault', 'non', 10, 5, NULL, NULL),
-(19, 'VEH-207', 'ABC-183', '1975', 'Iveco', 'porro', 3, 7, NULL, NULL),
-(20, 'VEH-025', 'ABC-549', '1998', 'MAN', 'et', 12, 5, NULL, NULL);
+(1, 'VEH-182', 'ABC-186', '2015', 'Renault', 'eveniet', 12, 5, NULL, NULL),
+(2, 'VEH-668', 'ABC-794', '1981', 'Mercedes', 'quia', 4, 5, NULL, NULL),
+(3, 'VEH-004', 'ABC-544', '2007', 'Renault', 'non', 7, 10, NULL, NULL),
+(4, 'VEH-214', 'ABC-648', '1996', 'MAN', 'labore', 4, 7, NULL, NULL),
+(5, 'VEH-385', 'ABC-604', '2008', 'Mercedes', 'recusandae', 10, 3, NULL, NULL),
+(6, 'VEH-510', 'ABC-443', '1984', 'Renault', 'reprehenderit', 1, 5, NULL, NULL),
+(7, 'VEH-562', 'ABC-655', '1977', 'MAN', 'enim', 8, 9, NULL, NULL),
+(8, 'VEH-789', 'ABC-537', '2016', 'Mercedes', 'fugiat', 7, 6, NULL, NULL),
+(9, 'VEH-403', 'ABC-650', '2007', 'MAN', 'animi', 7, 9, NULL, NULL),
+(10, 'VEH-269', 'ABC-165', '2004', 'Iveco', 'est', 11, 4, NULL, NULL),
+(11, 'VEH-249', 'ABC-552', '2003', 'Mercedes', 'iure', 7, 8, NULL, NULL),
+(12, 'VEH-512', 'ABC-990', '2014', 'MAN', 'perferendis', 4, 10, NULL, NULL),
+(13, 'VEH-897', 'ABC-558', '1995', 'Mercedes', 'ea', 1, 4, NULL, NULL),
+(14, 'VEH-715', 'ABC-503', '1980', 'Mercedes', 'cupiditate', 11, 1, NULL, NULL),
+(15, 'VEH-792', 'ABC-766', '1987', 'Renault', 'omnis', 2, 7, NULL, NULL),
+(16, 'VEH-436', 'ABC-784', '2014', 'Iveco', 'corporis', 8, 4, NULL, NULL),
+(17, 'VEH-928', 'ABC-882', '1970', 'Mercedes', 'voluptatibus', 14, 3, NULL, NULL),
+(18, 'VEH-227', 'ABC-279', '2005', 'Iveco', 'aspernatur', 4, 10, NULL, NULL),
+(19, 'VEH-982', 'ABC-170', '2026', 'MAN', 'fugit', 2, 6, NULL, NULL),
+(20, 'VEH-448', 'ABC-805', '1979', 'MAN', 'quaerat', 7, 9, NULL, NULL);
 
 --
 -- Indexes for dumped tables
@@ -521,7 +527,7 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `states`
 --
 ALTER TABLE `states`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `type_interventions`
